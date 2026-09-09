@@ -2,12 +2,13 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_2_3_1_1 }}
-registry:
-  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\NoConnectedUser:
-    title: "2.3.1.1 | Ensure 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts' | NoConnectedUser"
+file:
+  win11cis_2_3_1_1_enableguestaccount:
+    title: "2.3.1.1 | Ensure 'Accounts: Guest account status' is set to 'Disabled' | EnableGuestAccount"
+    path: '{{ .Vars.win11cis_snapshot_dir }}\SystemAccess.EnableGuestAccount'
     exists: true
-    value: 3
-    type: REG_DWORD
+    contents:
+      - '/^0$/'
     meta:
       workstation: 1
       CIS_ID:

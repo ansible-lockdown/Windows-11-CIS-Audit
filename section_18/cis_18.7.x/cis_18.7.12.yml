@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_7_12 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint\NoWarningNoElevationOnInstall:
+    title: "18.7.12 | Ensure 'Point and Print Restrictions: When installing drivers for a new connection' is set to 'Enabled: Show warning and elevation prompt' | NoWarningNoElevationOnInstall"
+    exists: true
+    value: 0
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.7.12
+  {{ end }}
+{{ end }}

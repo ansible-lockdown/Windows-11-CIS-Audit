@@ -4,7 +4,7 @@
   {{ if .Vars.win11cis_rule_5_16 }}
 file:
   win11cis_5_16_pnrpautoreg:
-    title: "5.16 | Ensure 'PNRP Machine Name Publication Service (PNRPAutoReg)' is set to 'Disabled' | PNRPAutoReg"
+    title: "5.16 | Ensure 'PNRP Machine Name Publication Service (PNRPAutoReg)' is set to 'Disabled' or 'Not Installed' | PNRPAutoReg"
     path: '{{ .Vars.win11cis_snapshot_dir }}\Service.PNRPAutoReg'
     exists: true
     contents:

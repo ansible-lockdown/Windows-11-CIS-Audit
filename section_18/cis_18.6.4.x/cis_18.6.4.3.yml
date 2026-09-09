@@ -1,18 +1,16 @@
 ---
 
-{{ if .Vars.win11cis_level_1 }}
+{{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_18_6_4_3 }}
-    {{ if .Vars.win11cis_domain_joined }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient\EnableMulticast:
-    title: "18.6.4.3 | Ensure 'Turn off multicast name resolution' is set to 'Enabled' | EnableMulticast"
+  HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient\DisableIPv6DefaultDnsServers:
+    title: "18.6.4.3 | Ensure 'Turn off default IPv6 DNS Servers' is set to 'Enabled' | DisableIPv6DefaultDnsServers"
     exists: true
-    value: 0
+    value: 1
     type: REG_DWORD
     meta:
-      workstation: 1
+      workstation: 2
       CIS_ID:
         - 18.6.4.3
-    {{ end }}
   {{ end }}
 {{ end }}

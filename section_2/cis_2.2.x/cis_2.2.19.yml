@@ -2,16 +2,19 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_2_2_19 }}
+    {{ if not .Vars.win11cis_win_skip_for_test }}
 file:
-  win11cis_2_2_19_sedenyinteractivelogonright:
-    title: "2.2.19 | Ensure 'Deny log on locally' to include 'Guests' | SeDenyInteractiveLogonRight"
-    path: '{{ .Vars.win11cis_snapshot_dir }}\PrivilegeRights.SeDenyInteractiveLogonRight'
+  win11cis_2_2_19_sedenyremoteinteractivelogonright:
+    title: "2.2.19 | Ensure 'Deny log on through Remote Desktop Services' to include 'Guests, Local account' | SeDenyRemoteInteractiveLogonRight"
+    path: '{{ .Vars.win11cis_snapshot_dir }}\PrivilegeRights.SeDenyRemoteInteractiveLogonRight'
     exists: true
     contents:
+      - '/^(.*,)?S-1-5-113(,.*)?$/'
       - '/^(.*,)?S-1-5-32-546(,.*)?$/'
     meta:
       workstation: 1
       CIS_ID:
         - 2.2.19
+    {{ end }}
   {{ end }}
 {{ end }}

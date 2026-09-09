@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_4_6 }}
 registry:
-  HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel\DisableExceptionChainValidation:
-    title: "18.4.6 | Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled' | DisableExceptionChainValidation"
+  HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\NodeType:
+    title: "18.4.6 | Ensure 'NetBT NodeType configuration' is set to 'Enabled: P-node (recommended)' | NodeType"
     exists: true
-    value: 0
+    value: {{ .Vars.win11cis_netbt_nodetype }}
     type: REG_DWORD
     meta:
       workstation: 1

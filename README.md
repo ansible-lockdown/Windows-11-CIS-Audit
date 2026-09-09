@@ -2,7 +2,7 @@
 
 ## Overview
 
-### Based on CIS Microsoft Windows 11 Enterprise Benchmark v3.0.0
+### Based on CIS Microsoft Windows 11 Enterprise Benchmark v5.1.0
 
 [Centre For Internet Security]
 
@@ -139,13 +139,13 @@ meaningful section 19 result, not a defect.
 | Section | In benchmark | Asserted | Coverage |
 | --- | --- | --- | --- |
 | 1 | 11 | 11 | 100% |
-| 2 | 105 | 105 | 100% |
+| 2 | 100 | 100 | 100% |
 | 5 | 44 | 44 | 100% |
 | 9 | 23 | 23 | 100% |
 | 17 | 27 | 27 | 100% |
-| 18 | 317 | 317 | 100% |
-| 19 | 13 | 13 | 100% |
-| **All** | **540** | **540** | **100.0%** |
+| 18 | 319 | 319 | 100% |
+| 19 | 11 | 11 | 100% |
+| **All** | **535** | **535** | **100.0%** |
 
 ### Controls that branch on state discovered at run time
 
@@ -155,7 +155,7 @@ an account has been renamed, what a site variable was set to. Each
 asserts the part that holds on every host; the feature-dependent
 part is matched optionally rather than required.
 
-2.2.14, 2.2.24, 2.2.29, 2.3.1.4, 2.3.1.5, 18.10.86.2, 18.10.92.2.1, 18.10.92.2.2
+2.2.13, 2.2.23, 2.2.28, 2.3.1.3, 2.3.1.4, 18.10.88.2, 18.10.94.2.1, 18.10.94.2.2
 
 <!-- END COVERAGE -->
 
@@ -179,7 +179,7 @@ For the latest information on audit and how it can be used please visit
 If running as part of the Ansible playbook, this will pull in the relevant
 branch for the version of benchmark you are remediating.
 
-- e.g. v3.0.0 will pull in branch benchmark-v3.0.0
+- e.g. v5.1.0 will pull in branch benchmark-v5.1.0
 
 Devel is normally the latest benchmark version, so may differ from the version
 of benchmark you wish to test.

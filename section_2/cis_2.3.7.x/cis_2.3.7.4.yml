@@ -3,11 +3,12 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_2_3_7_4 }}
 registry:
-  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\InactivityTimeoutSecs:
-    title: "2.3.7.4 | Ensure 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0' | InactivityTimeoutSecs"
+  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LegalNoticeText:
+    title: "2.3.7.4 | Configure 'Interactive logon: Message text for users attempting to log on' | LegalNoticeText"
     exists: true
-    value: {{ .Vars.win11cis_inactivity_timeout_seconds }}
-    type: REG_DWORD
+    value:
+      match-regexp: '{{ .Vars.win11cis_legal_notice_match }}'
+    type: REG_SZ
     meta:
       workstation: 1
       CIS_ID:

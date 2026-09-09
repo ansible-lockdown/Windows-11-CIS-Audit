@@ -3,12 +3,12 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_2_2_31 }}
 file:
-  win11cis_2_2_31_serelabelprivilege:
-    title: "2.2.31 | Ensure 'Modify an object label' is set to 'No One' | SeRelabelPrivilege"
-    path: '{{ .Vars.win11cis_snapshot_dir }}\PrivilegeRights.SeRelabelPrivilege'
+  win11cis_2_2_31_sesystemenvironmentprivilege:
+    title: "2.2.31 | Ensure 'Modify firmware environment values' is set to 'Administrators' | SeSystemEnvironmentPrivilege"
+    path: '{{ .Vars.win11cis_snapshot_dir }}\PrivilegeRights.SeSystemEnvironmentPrivilege'
     exists: true
     contents:
-      - '/^NONE$/'
+      - '/^S-1-5-32-544$/'
     meta:
       workstation: 1
       CIS_ID:

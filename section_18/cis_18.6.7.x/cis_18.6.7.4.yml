@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_6_7_4 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanServer\EnableAuthRateLimiter:
+    title: "18.6.7.4 | Ensure 'Enable authentication rate limiter' is set to 'Enabled' | EnableAuthRateLimiter"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.6.7.4
+  {{ end }}
+{{ end }}

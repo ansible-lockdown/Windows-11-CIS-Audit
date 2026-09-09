@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_2 }}
+  {{ if .Vars.win11cis_rule_18_10_16_4 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\EnableOneSettingsAuditing:
+    title: "18.10.16.4 | Ensure 'Enable OneSettings Auditing' is set to 'Enabled' | EnableOneSettingsAuditing"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 2
+      CIS_ID:
+        - 18.10.16.4
+  {{ end }}
+{{ end }}

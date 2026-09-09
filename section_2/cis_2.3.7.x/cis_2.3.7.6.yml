@@ -1,15 +1,15 @@
 ---
 
-{{ if .Vars.win11cis_level_1 }}
+{{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_2_3_7_6 }}
 registry:
-  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\LegalNoticeCaption:
-    title: "2.3.7.6 | Configure 'Interactive logon: Message title for users attempting to log on' | LegalNoticeCaption"
+  HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\CachedLogonsCount:
+    title: "2.3.7.6 | Ensure 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '4 or fewer logon(s)' | CachedLogonsCount"
     exists: true
-    value: '{{ .Vars.win11cis_legal_notice_caption }}'
+    value: '{{ .Vars.win11cis_cached_logons_count }}'
     type: REG_SZ
     meta:
-      workstation: 1
+      workstation: 2
       CIS_ID:
         - 2.3.7.6
   {{ end }}

@@ -1,15 +1,15 @@
 ---
 
-{{ if .Vars.win11cis_level_1 }}
+{{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_18_10_81_1 }}
 registry:
-  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableMPR:
-    title: "18.10.81.1 | Ensure 'Enable MPR notifications for the system' is set to 'Disabled' | EnableMPR"
+  HKLM\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace\AllowSuggestedAppsInWindowsInkWorkspace:
+    title: "18.10.81.1 | Ensure 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled' | AllowSuggestedAppsInWindowsInkWorkspace"
     exists: true
     value: 0
     type: REG_DWORD
     meta:
-      workstation: 1
+      workstation: 2
       CIS_ID:
         - 18.10.81.1
   {{ end }}

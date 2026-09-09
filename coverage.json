@@ -248,7 +248,7 @@
   },
   {
     "rule_id": "2.2.9",
-    "title": "Ensure 'Change the time zone' is set to 'Administrators, LOCAL SERVICE, Users'",
+    "title": "Ensure 'Create a pagefile' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.9.yml",
@@ -261,7 +261,7 @@
   },
   {
     "rule_id": "2.2.10",
-    "title": "Ensure 'Create a pagefile' is set to 'Administrators'",
+    "title": "Ensure 'Create a token object' is set to 'No One'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.10.yml",
@@ -274,7 +274,7 @@
   },
   {
     "rule_id": "2.2.11",
-    "title": "Ensure 'Create a token object' is set to 'No One'",
+    "title": "Ensure 'Create global objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.11.yml",
@@ -287,7 +287,7 @@
   },
   {
     "rule_id": "2.2.12",
-    "title": "Ensure 'Create global objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'",
+    "title": "Ensure 'Create permanent shared objects' is set to 'No One'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.12.yml",
@@ -300,23 +300,10 @@
   },
   {
     "rule_id": "2.2.13",
-    "title": "Ensure 'Create permanent shared objects' is set to 'No One'",
+    "title": "Ensure 'Create symbolic links' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.13.yml",
-    "assertions": 1,
-    "resources": [
-      "file"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "2.2.14",
-    "title": "Configure 'Create symbolic links'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.2.x/cis_2.2.14.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -325,8 +312,21 @@
     "reason": null
   },
   {
-    "rule_id": "2.2.15",
+    "rule_id": "2.2.14",
     "title": "Ensure 'Debug programs' is set to 'Administrators'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_2/cis_2.2.x/cis_2.2.14.yml",
+    "assertions": 1,
+    "resources": [
+      "file"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "2.2.15",
+    "title": "Ensure 'Deny access to this computer from the network' to include 'Guests, Local account'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.15.yml",
@@ -339,7 +339,7 @@
   },
   {
     "rule_id": "2.2.16",
-    "title": "Ensure 'Deny access to this computer from the network' to include 'Guests, Local account'",
+    "title": "Ensure 'Deny log on as a batch job' to include 'Guests'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.16.yml",
@@ -352,7 +352,7 @@
   },
   {
     "rule_id": "2.2.17",
-    "title": "Ensure 'Deny log on as a batch job' to include 'Guests'",
+    "title": "Ensure 'Deny log on as a service' to include 'Guests'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.17.yml",
@@ -365,7 +365,7 @@
   },
   {
     "rule_id": "2.2.18",
-    "title": "Ensure 'Deny log on as a service' to include 'Guests'",
+    "title": "Ensure 'Deny log on locally' to include 'Guests'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.18.yml",
@@ -378,7 +378,7 @@
   },
   {
     "rule_id": "2.2.19",
-    "title": "Ensure 'Deny log on locally' to include 'Guests'",
+    "title": "Ensure 'Deny log on through Remote Desktop Services' to include 'Guests, Local account'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.19.yml",
@@ -391,7 +391,7 @@
   },
   {
     "rule_id": "2.2.20",
-    "title": "Ensure 'Deny log on through Remote Desktop Services' to include 'Guests, Local account'",
+    "title": "Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.20.yml",
@@ -404,7 +404,7 @@
   },
   {
     "rule_id": "2.2.21",
-    "title": "Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One'",
+    "title": "Ensure 'Force shutdown from a remote system' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.21.yml",
@@ -417,7 +417,7 @@
   },
   {
     "rule_id": "2.2.22",
-    "title": "Ensure 'Force shutdown from a remote system' is set to 'Administrators'",
+    "title": "Ensure 'Generate security audits' is set to 'LOCAL SERVICE, NETWORK SERVICE, RESTRICTED SERVICES\\PrintSpoolerService'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.22.yml",
@@ -430,23 +430,10 @@
   },
   {
     "rule_id": "2.2.23",
-    "title": "Ensure 'Generate security audits' is set to 'LOCAL SERVICE, NETWORK SERVICE'",
+    "title": "Ensure 'Impersonate a client after authentication' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE, RESTRICTED SERVICES\\PrintSpoolerService'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.23.yml",
-    "assertions": 1,
-    "resources": [
-      "file"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "2.2.24",
-    "title": "Ensure 'Impersonate a client after authentication' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.2.x/cis_2.2.24.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -455,8 +442,21 @@
     "reason": null
   },
   {
-    "rule_id": "2.2.25",
+    "rule_id": "2.2.24",
     "title": "Ensure 'Increase scheduling priority' is set to 'Administrators, Window Manager\\Window Manager Group'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_2/cis_2.2.x/cis_2.2.24.yml",
+    "assertions": 1,
+    "resources": [
+      "file"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "2.2.25",
+    "title": "Ensure 'Load and unload device drivers' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.25.yml",
@@ -469,7 +469,7 @@
   },
   {
     "rule_id": "2.2.26",
-    "title": "Ensure 'Load and unload device drivers' is set to 'Administrators'",
+    "title": "Ensure 'Lock pages in memory' is set to 'No One'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.26.yml",
@@ -482,9 +482,9 @@
   },
   {
     "rule_id": "2.2.27",
-    "title": "Ensure 'Lock pages in memory' is set to 'No One'",
+    "title": "Ensure 'Log on as a batch job' is set to 'Administrators'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_2/cis_2.2.x/cis_2.2.27.yml",
     "assertions": 1,
     "resources": [
@@ -495,23 +495,10 @@
   },
   {
     "rule_id": "2.2.28",
-    "title": "Ensure 'Log on as a batch job' is set to 'Administrators'",
+    "title": "Ensure 'Log on as a service' is set to 'No One'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_2/cis_2.2.x/cis_2.2.28.yml",
-    "assertions": 1,
-    "resources": [
-      "file"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "2.2.29",
-    "title": "Configure 'Log on as a service'",
-    "emitted": true,
-    "gate": "win11cis_level_2",
-    "file": "section_2/cis_2.2.x/cis_2.2.29.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -520,8 +507,21 @@
     "reason": null
   },
   {
-    "rule_id": "2.2.30",
+    "rule_id": "2.2.29",
     "title": "Ensure 'Manage auditing and security log' is set to 'Administrators'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_2/cis_2.2.x/cis_2.2.29.yml",
+    "assertions": 1,
+    "resources": [
+      "file"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "2.2.30",
+    "title": "Ensure 'Modify an object label' is set to 'No One'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.30.yml",
@@ -534,7 +534,7 @@
   },
   {
     "rule_id": "2.2.31",
-    "title": "Ensure 'Modify an object label' is set to 'No One'",
+    "title": "Ensure 'Modify firmware environment values' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.31.yml",
@@ -547,7 +547,7 @@
   },
   {
     "rule_id": "2.2.32",
-    "title": "Ensure 'Modify firmware environment values' is set to 'Administrators'",
+    "title": "Ensure 'Perform volume maintenance tasks' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.32.yml",
@@ -560,7 +560,7 @@
   },
   {
     "rule_id": "2.2.33",
-    "title": "Ensure 'Perform volume maintenance tasks' is set to 'Administrators'",
+    "title": "Ensure 'Profile single process' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.33.yml",
@@ -573,7 +573,7 @@
   },
   {
     "rule_id": "2.2.34",
-    "title": "Ensure 'Profile single process' is set to 'Administrators'",
+    "title": "Ensure 'Profile system performance' is set to 'Administrators, NT SERVICE\\WdiServiceHost'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.34.yml",
@@ -586,7 +586,7 @@
   },
   {
     "rule_id": "2.2.35",
-    "title": "Ensure 'Profile system performance' is set to 'Administrators, NT SERVICE\\WdiServiceHost'",
+    "title": "Ensure 'Replace a process level token' is set to 'LOCAL SERVICE, NETWORK SERVICE'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.35.yml",
@@ -599,7 +599,7 @@
   },
   {
     "rule_id": "2.2.36",
-    "title": "Ensure 'Replace a process level token' is set to 'LOCAL SERVICE, NETWORK SERVICE'",
+    "title": "Ensure 'Restore files and directories' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.36.yml",
@@ -612,7 +612,7 @@
   },
   {
     "rule_id": "2.2.37",
-    "title": "Ensure 'Restore files and directories' is set to 'Administrators'",
+    "title": "Ensure 'Shut down the system' is set to 'Administrators, Users'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.37.yml",
@@ -625,7 +625,7 @@
   },
   {
     "rule_id": "2.2.38",
-    "title": "Ensure 'Shut down the system' is set to 'Administrators, Users'",
+    "title": "Ensure 'Take ownership of files or other objects' is set to 'Administrators'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.2.x/cis_2.2.38.yml",
@@ -637,50 +637,24 @@
     "reason": null
   },
   {
-    "rule_id": "2.2.39",
-    "title": "Ensure 'Take ownership of files or other objects' is set to 'Administrators'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.2.x/cis_2.2.39.yml",
-    "assertions": 1,
-    "resources": [
-      "file"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
     "rule_id": "2.3.1.1",
-    "title": "Ensure 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'",
+    "title": "Ensure 'Accounts: Guest account status' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.1.x/cis_2.3.1.1.yml",
     "assertions": 1,
     "resources": [
-      "registry"
+      "file"
     ],
     "hand_finish": false,
     "reason": null
   },
   {
     "rule_id": "2.3.1.2",
-    "title": "Ensure 'Accounts: Guest account status' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.1.x/cis_2.3.1.2.yml",
-    "assertions": 1,
-    "resources": [
-      "file"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "2.3.1.3",
     "title": "Ensure 'Accounts: Limit local account use of blank passwords to console logon only' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.1.x/cis_2.3.1.3.yml",
+    "file": "section_2/cis_2.3.1.x/cis_2.3.1.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -689,11 +663,11 @@
     "reason": null
   },
   {
-    "rule_id": "2.3.1.4",
+    "rule_id": "2.3.1.3",
     "title": "Configure 'Accounts: Rename administrator account'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.1.x/cis_2.3.1.4.yml",
+    "file": "section_2/cis_2.3.1.x/cis_2.3.1.3.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -702,11 +676,11 @@
     "reason": null
   },
   {
-    "rule_id": "2.3.1.5",
+    "rule_id": "2.3.1.4",
     "title": "Configure 'Accounts: Rename guest account'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.1.x/cis_2.3.1.5.yml",
+    "file": "section_2/cis_2.3.1.x/cis_2.3.1.4.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -835,7 +809,7 @@
     "rule_id": "2.3.7.1",
     "title": "Ensure 'Interactive logon: Do not require CTRL+ALT+DEL' is set to 'Disabled'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_2/cis_2.3.7.x/cis_2.3.7.1.yml",
     "assertions": 1,
     "resources": [
@@ -859,9 +833,9 @@
   },
   {
     "rule_id": "2.3.7.3",
-    "title": "(BL) Ensure 'Interactive logon: Machine account lockout threshold' is set to '10 or fewer invalid logon attempts, but not 0'",
+    "title": "Ensure 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0'",
     "emitted": true,
-    "gate": "win11cis_bitlocker",
+    "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.7.x/cis_2.3.7.3.yml",
     "assertions": 1,
     "resources": [
@@ -872,7 +846,7 @@
   },
   {
     "rule_id": "2.3.7.4",
-    "title": "Ensure 'Interactive logon: Machine inactivity limit' is set to '900 or fewer second(s), but not 0'",
+    "title": "Configure 'Interactive logon: Message text for users attempting to log on'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.7.x/cis_2.3.7.4.yml",
@@ -885,7 +859,7 @@
   },
   {
     "rule_id": "2.3.7.5",
-    "title": "Configure 'Interactive logon: Message text for users attempting to log on'",
+    "title": "Configure 'Interactive logon: Message title for users attempting to log on'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.7.x/cis_2.3.7.5.yml",
@@ -898,9 +872,9 @@
   },
   {
     "rule_id": "2.3.7.6",
-    "title": "Configure 'Interactive logon: Message title for users attempting to log on'",
+    "title": "Ensure 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '4 or fewer logon(s)'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_2/cis_2.3.7.x/cis_2.3.7.6.yml",
     "assertions": 1,
     "resources": [
@@ -911,9 +885,9 @@
   },
   {
     "rule_id": "2.3.7.7",
-    "title": "Ensure 'Interactive logon: Number of previous logons to cache (in case domain controller is not available)' is set to '4 or fewer logon(s)'",
+    "title": "Ensure 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days'",
     "emitted": true,
-    "gate": "win11cis_level_2",
+    "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.7.x/cis_2.3.7.7.yml",
     "assertions": 1,
     "resources": [
@@ -924,23 +898,10 @@
   },
   {
     "rule_id": "2.3.7.8",
-    "title": "Ensure 'Interactive logon: Prompt user to change password before expiration' is set to 'between 5 and 14 days'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.7.x/cis_2.3.7.8.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "2.3.7.9",
     "title": "Ensure 'Interactive logon: Smart card removal behavior' is set to 'Lock Workstation' or higher",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.7.x/cis_2.3.7.9.yml",
+    "file": "section_2/cis_2.3.7.x/cis_2.3.7.8.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -963,23 +924,10 @@
   },
   {
     "rule_id": "2.3.8.2",
-    "title": "Ensure 'Microsoft network client: Digitally sign communications (if server agrees)' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.8.x/cis_2.3.8.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "2.3.8.3",
     "title": "Ensure 'Microsoft network client: Send unencrypted password to third-party SMB servers' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.8.x/cis_2.3.8.3.yml",
+    "file": "section_2/cis_2.3.8.x/cis_2.3.8.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -1015,7 +963,7 @@
   },
   {
     "rule_id": "2.3.9.3",
-    "title": "Ensure 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'",
+    "title": "Ensure 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.9.x/cis_2.3.9.3.yml",
@@ -1028,23 +976,10 @@
   },
   {
     "rule_id": "2.3.9.4",
-    "title": "Ensure 'Microsoft network server: Disconnect clients when logon hours expire' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.9.x/cis_2.3.9.4.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "2.3.9.5",
     "title": "Ensure 'Microsoft network server: Server SPN target name validation level' is set to 'Accept if provided by client' or higher",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_2/cis_2.3.9.x/cis_2.3.9.5.yml",
+    "file": "section_2/cis_2.3.9.x/cis_2.3.9.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -1262,7 +1197,7 @@
   },
   {
     "rule_id": "2.3.11.5",
-    "title": "Ensure 'Network security: Do not store LAN Manager hash value on next password change' is set to 'Enabled'",
+    "title": "Ensure 'Network security: Force logoff when logon hours expire' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.11.x/cis_2.3.11.5.yml",
@@ -1275,7 +1210,7 @@
   },
   {
     "rule_id": "2.3.11.6",
-    "title": "Ensure 'Network security: Force logoff when logon hours expire' is set to 'Enabled'",
+    "title": "Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.11.x/cis_2.3.11.6.yml",
@@ -1288,7 +1223,7 @@
   },
   {
     "rule_id": "2.3.11.7",
-    "title": "Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM'",
+    "title": "Ensure 'Network security: LDAP client encryption requirements' is set to 'Negotiate sealing' or higher",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_2/cis_2.3.11.x/cis_2.3.11.7.yml",
@@ -1561,22 +1496,22 @@
   },
   {
     "rule_id": "5.5",
-    "title": "Ensure 'Geolocation Service (lfsvc)' is set to 'Disabled'",
+    "title": "Ensure 'GameInput Service (GameInputSvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_5/cis_5.1.x/cis_5.5.yml",
     "assertions": 1,
     "resources": [
-      "file"
+      "registry"
     ],
     "hand_finish": false,
     "reason": null
   },
   {
     "rule_id": "5.6",
-    "title": "Ensure 'IIS Admin Service (IISADMIN)' is set to 'Disabled' or 'Not Installed'",
+    "title": "Ensure 'Geolocation Service (lfsvc)' is set to 'Disabled'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_5/cis_5.1.x/cis_5.6.yml",
     "assertions": 1,
     "resources": [
@@ -1587,7 +1522,7 @@
   },
   {
     "rule_id": "5.7",
-    "title": "Ensure 'Infrared monitor service (irmon)' is set to 'Disabled' or 'Not Installed'",
+    "title": "Ensure 'IIS Admin Service (IISADMIN)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_5/cis_5.1.x/cis_5.7.yml",
@@ -1600,9 +1535,9 @@
   },
   {
     "rule_id": "5.8",
-    "title": "Ensure 'Link-Layer Topology Discovery Mapper (lltdsvc)' is set to 'Disabled'",
+    "title": "Ensure 'Infrared monitor service (irmon)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
-    "gate": "win11cis_level_2",
+    "gate": "win11cis_level_1",
     "file": "section_5/cis_5.1.x/cis_5.8.yml",
     "assertions": 1,
     "resources": [
@@ -1613,9 +1548,9 @@
   },
   {
     "rule_id": "5.9",
-    "title": "Ensure 'LxssManager (LxssManager)' is set to 'Disabled' or 'Not Installed'",
+    "title": "Ensure 'Link-Layer Topology Discovery Mapper (lltdsvc)' is set to 'Disabled'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_5/cis_5.1.x/cis_5.9.yml",
     "assertions": 1,
     "resources": [
@@ -1665,7 +1600,7 @@
   },
   {
     "rule_id": "5.13",
-    "title": "Ensure 'Peer Name Resolution Protocol (PNRPsvc)' is set to 'Disabled'",
+    "title": "Ensure 'Peer Name Resolution Protocol (PNRPsvc)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_5/cis_5.12.x/cis_5.13.yml",
@@ -1678,7 +1613,7 @@
   },
   {
     "rule_id": "5.14",
-    "title": "Ensure 'Peer Networking Grouping (p2psvc)' is set to 'Disabled'",
+    "title": "Ensure 'Peer Networking Grouping (p2psvc)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_5/cis_5.12.x/cis_5.14.yml",
@@ -1691,7 +1626,7 @@
   },
   {
     "rule_id": "5.15",
-    "title": "Ensure 'Peer Networking Identity Manager (p2pimsvc)' is set to 'Disabled'",
+    "title": "Ensure 'Peer Networking Identity Manager (p2pimsvc)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_5/cis_5.12.x/cis_5.15.yml",
@@ -1704,7 +1639,7 @@
   },
   {
     "rule_id": "5.16",
-    "title": "Ensure 'PNRP Machine Name Publication Service (PNRPAutoReg)' is set to 'Disabled'",
+    "title": "Ensure 'PNRP Machine Name Publication Service (PNRPAutoReg)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_5/cis_5.12.x/cis_5.16.yml",
@@ -2003,7 +1938,7 @@
   },
   {
     "rule_id": "5.39",
-    "title": "Ensure 'Windows Remote Management (WS- Management) (WinRM)' is set to 'Disabled'",
+    "title": "Ensure 'Windows Remote Management (WS-Management) (WinRM)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_5/cis_5.34.x/cis_5.39.yml",
@@ -2122,7 +2057,7 @@
   },
   {
     "rule_id": "9.1.4",
-    "title": "Ensure 'Windows Firewall: Domain: Logging: Name' is set to '%SystemRoot%\\System32\\logfiles\\firewall\\domainfw.log'",
+    "title": "Ensure 'Windows Firewall: Domain: Logging: Name' is configured",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_9/cis_9.1.x/cis_9.1.4.yml",
@@ -2215,7 +2150,7 @@
   },
   {
     "rule_id": "9.2.4",
-    "title": "Ensure 'Windows Firewall: Private: Logging: Name' is set to '%SystemRoot%\\System32\\logfiles\\firewall\\privatefw.log'",
+    "title": "Ensure 'Windows Firewall: Private: Logging: Name' is configured",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_9/cis_9.2.x/cis_9.2.4.yml",
@@ -2334,7 +2269,7 @@
   },
   {
     "rule_id": "9.3.6",
-    "title": "Ensure 'Windows Firewall: Public: Logging: Name' is set to '%SystemRoot%\\System32\\logfiles\\firewall\\publicfw.log'",
+    "title": "Ensure 'Windows Firewall: Public: Logging: Name' is configured",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_9/cis_9.3.x/cis_9.3.6.yml",
@@ -2659,7 +2594,7 @@
   },
   {
     "rule_id": "17.8.1",
-    "title": "Ensure 'Audit Sensitive Privilege Use' is set to 'Success and Failure'",
+    "title": "Ensure 'Audit Sensitive Privilege Use' is set to 'Success'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_17/cis_17.8.x/cis_17.8.1.yml",
@@ -2802,7 +2737,7 @@
   },
   {
     "rule_id": "18.4.2",
-    "title": "Ensure 'Configure RPC packet level privacy setting for incoming connections' is set to 'Enabled'",
+    "title": "Ensure 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver (recommended)'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.4.x/cis_18.4.2.yml",
@@ -2815,7 +2750,7 @@
   },
   {
     "rule_id": "18.4.3",
-    "title": "Ensure 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver (recommended)'",
+    "title": "Ensure 'Configure SMB v1 server' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.4.x/cis_18.4.3.yml",
@@ -2828,7 +2763,7 @@
   },
   {
     "rule_id": "18.4.4",
-    "title": "Ensure 'Configure SMB v1 server' is set to 'Disabled'",
+    "title": "Ensure 'Enable Certificate Padding' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.4.x/cis_18.4.4.yml",
@@ -2841,7 +2776,7 @@
   },
   {
     "rule_id": "18.4.5",
-    "title": "Ensure 'Enable Certificate Padding' is set to 'Enabled'",
+    "title": "Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.4.x/cis_18.4.5.yml",
@@ -2854,7 +2789,7 @@
   },
   {
     "rule_id": "18.4.6",
-    "title": "Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'",
+    "title": "Ensure 'NetBT NodeType configuration' is set to 'Enabled: P-node (recommended)'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.4.x/cis_18.4.6.yml",
@@ -2867,23 +2802,10 @@
   },
   {
     "rule_id": "18.4.7",
-    "title": "Ensure 'NetBT NodeType configuration' is set to 'Enabled: P-node (recommended)'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.4.x/cis_18.4.7.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.4.8",
     "title": "Ensure 'WDigest Authentication' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.4.x/cis_18.4.8.yml",
+    "file": "section_18/cis_18.4.x/cis_18.4.7.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -3010,9 +2932,9 @@
   },
   {
     "rule_id": "18.5.10",
-    "title": "Ensure 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires' is set to 'Enabled: 5 or fewer seconds'",
+    "title": "Ensure 'MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_18/cis_18.5.x/cis_18.5.10.yml",
     "assertions": 1,
     "resources": [
@@ -3023,7 +2945,7 @@
   },
   {
     "rule_id": "18.5.11",
-    "title": "Ensure 'MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'",
+    "title": "Ensure 'MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_18/cis_18.5.x/cis_18.5.11.yml",
@@ -3036,9 +2958,9 @@
   },
   {
     "rule_id": "18.5.12",
-    "title": "Ensure 'MSS: (TcpMaxDataRetransmissions) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3'",
+    "title": "Ensure 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less'",
     "emitted": true,
-    "gate": "win11cis_level_2",
+    "gate": "win11cis_level_1",
     "file": "section_18/cis_18.5.x/cis_18.5.12.yml",
     "assertions": 1,
     "resources": [
@@ -3048,21 +2970,8 @@
     "reason": null
   },
   {
-    "rule_id": "18.5.13",
-    "title": "Ensure 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.5.x/cis_18.5.13.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
     "rule_id": "18.6.4.1",
-    "title": "Ensure 'Configure DNS over HTTPS (DoH) name resolution' is set to 'Enabled: Allow DoH' or higher",
+    "title": "Ensure 'Configure multicast DNS (mDNS) protocol' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.6.4.x/cis_18.6.4.1.yml",
@@ -3088,10 +2997,23 @@
   },
   {
     "rule_id": "18.6.4.3",
+    "title": "Ensure 'Turn off default IPv6 DNS Servers' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.6.4.x/cis_18.6.4.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.4.4",
     "title": "Ensure 'Turn off multicast name resolution' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.6.4.x/cis_18.6.4.3.yml",
+    "file": "section_18/cis_18.6.4.x/cis_18.6.4.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -3113,11 +3035,180 @@
     "reason": null
   },
   {
+    "rule_id": "18.6.7.1",
+    "title": "Ensure 'Audit client does not support encryption' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.7.x/cis_18.6.7.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.7.2",
+    "title": "Ensure 'Audit client does not support signing' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.7.x/cis_18.6.7.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.7.3",
+    "title": "Ensure 'Audit insecure guest logon' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.7.x/cis_18.6.7.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.7.4",
+    "title": "Ensure 'Enable authentication rate limiter' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.7.x/cis_18.6.7.4.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.7.5",
+    "title": "Ensure 'Enable remote mailslots' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.7.x/cis_18.6.7.5.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.7.6",
+    "title": "Ensure 'Mandate the minimum version of SMB' is set to 'Enabled: 3.1.1'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.7.x/cis_18.6.7.6.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.7.7",
+    "title": "Ensure 'Set authentication rate limiter delay (milliseconds)' is set to 'Enabled: 2000' or more",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.7.x/cis_18.6.7.7.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
     "rule_id": "18.6.8.1",
-    "title": "Ensure 'Enable insecure guest logons' is set to 'Disabled'",
+    "title": "Ensure 'Audit insecure guest logon' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.6.8.x/cis_18.6.8.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.8.2",
+    "title": "Ensure 'Audit server does not support encryption' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.8.x/cis_18.6.8.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.8.3",
+    "title": "Ensure 'Audit server does not support signing' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.8.x/cis_18.6.8.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.8.4",
+    "title": "Ensure 'Enable insecure guest logons' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.8.x/cis_18.6.8.4.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.8.5",
+    "title": "Ensure 'Enable remote mailslots' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.8.x/cis_18.6.8.5.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.8.6",
+    "title": "Ensure 'Mandate the minimum version of SMB' is set to 'Enabled: 3.1.1'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.8.x/cis_18.6.8.6.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.6.8.7",
+    "title": "Ensure 'Require Encryption' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.6.8.x/cis_18.6.8.7.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -3205,7 +3296,7 @@
   },
   {
     "rule_id": "18.6.14.1",
-    "title": "Ensure 'Hardened UNC Paths' is set to 'Enabled, with \"Require Mutual Authentication\", \"Require Integrity\", and \u201cRequire Privacy\u201d set for all NETLOGON and SYSVOL shares'",
+    "title": "Ensure 'Hardened UNC Paths' is set to 'Enabled, with \"Require Mutual Authentication\", \"Require Integrity\", and \"Require Privacy\" set for all NETLOGON and SYSVOL shares'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.6.14.x/cis_18.6.14.1.yml",
@@ -3387,7 +3478,7 @@
   },
   {
     "rule_id": "18.7.8",
-    "title": "Ensure 'Limits print driver installation to Administrators' is set to 'Enabled'",
+    "title": "Ensure 'Configure RPC packet level privacy setting for incoming connections' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.7.x/cis_18.7.8.yml",
@@ -3400,9 +3491,9 @@
   },
   {
     "rule_id": "18.7.9",
-    "title": "Ensure 'Manage processing of Queue-specific files' is set to 'Enabled: Limit Queue-specific files to Color profiles'",
+    "title": "Ensure 'Configure Windows protected print' is set to 'Enabled'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_18/cis_18.7.x/cis_18.7.9.yml",
     "assertions": 1,
     "resources": [
@@ -3413,7 +3504,7 @@
   },
   {
     "rule_id": "18.7.10",
-    "title": "Ensure 'Point and Print Restrictions: When installing drivers for a new connection' is set to 'Enabled: Show warning and elevation prompt'",
+    "title": "Ensure 'Limits print driver installation to Administrators' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.7.x/cis_18.7.10.yml",
@@ -3426,10 +3517,101 @@
   },
   {
     "rule_id": "18.7.11",
-    "title": "Ensure 'Point and Print Restrictions: When updating drivers for an existing connection' is set to 'Enabled: Show warning and elevation prompt'",
+    "title": "Ensure 'Manage processing of Queue-specific files' is set to 'Enabled: Limit Queue-specific files to Color profiles'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.7.x/cis_18.7.11.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.7.12",
+    "title": "Ensure 'Point and Print Restrictions: When installing drivers for a new connection' is set to 'Enabled: Show warning and elevation prompt'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.7.x/cis_18.7.12.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.7.13",
+    "title": "Ensure 'Point and Print Restrictions: When updating drivers for an existing connection' is set to 'Enabled: Show warning and elevation prompt'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.7.x/cis_18.7.13.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.7.14",
+    "title": "Ensure 'Require IPPS for IPP printers' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.7.x/cis_18.7.14.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.7.15",
+    "title": "Ensure 'Set TLS/SSL security policy for IPP printers: Disallow invalid certificate authority' is set to 'Enabled: Checked'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.7.x/cis_18.7.15.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.7.16",
+    "title": "Ensure 'Set TLS/SSL security policy for IPP printers: Disallow non-server certificates' is set to 'Enabled: Checked'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.7.x/cis_18.7.16.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.7.17",
+    "title": "Ensure 'Set TLS/SSL security policy for IPP printers: Disallow invalid certificate common name' is set to 'Enabled: Checked'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.7.x/cis_18.7.17.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.7.18",
+    "title": "Ensure 'Set TLS/SSL security policy for IPP printers: Disallow invalid certificate date' is set to 'Enabled: Checked'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.7.x/cis_18.7.18.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -3491,7 +3673,7 @@
   },
   {
     "rule_id": "18.9.4.2",
-    "title": "Ensure 'Remote host allows delegation of non- exportable credentials' is set to 'Enabled'",
+    "title": "Ensure 'Remote host allows delegation of non-exportable credentials' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.4.x/cis_18.9.4.2.yml",
@@ -3582,7 +3764,7 @@
   },
   {
     "rule_id": "18.9.5.7",
-    "title": "Ensure 'Turn On Virtualization Based Security: Kernel-mode Hardware-enforced Stack Protection' is set to 'Enabled: Enabled in enforcement mode'",
+    "title": "Ensure 'Turn On Virtualization Based Security: Kernel- mode Hardware-enforced Stack Protection' is set to 'Enabled: Enabled in enforcement mode'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.5.x/cis_18.9.5.7.yml",
@@ -3595,7 +3777,7 @@
   },
   {
     "rule_id": "18.9.7.1.1",
-    "title": "(BL) Ensure 'Prevent installation of devices that match any of these device IDs' is set to 'Enabled'",
+    "title": "Ensure 'Prevent installation of devices using drivers that match these device setup classes' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
     "file": "section_18/cis_18.9.7.x/cis_18.9.7.1.1.yml",
@@ -3608,11 +3790,11 @@
   },
   {
     "rule_id": "18.9.7.1.2",
-    "title": "(BL) Ensure 'Prevent installation of devices that match any of these device IDs: Prevent installation of devices that match any of these device IDs' is set to 'PCI\\CC_0C0A'",
+    "title": "Ensure 'Prevent installation of devices using drivers that match these device setup classes: Prevent installation of devices using drivers for these device setup' is set to 'IEEE 1394 device setup classes'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
     "file": "section_18/cis_18.9.7.x/cis_18.9.7.1.2.yml",
-    "assertions": 1,
+    "assertions": 4,
     "resources": [
       "registry"
     ],
@@ -3621,7 +3803,7 @@
   },
   {
     "rule_id": "18.9.7.1.3",
-    "title": "(BL) Ensure 'Prevent installation of devices that match any of these device IDs: Also apply to matching devices that are already installed.' is set to 'True' (checked)",
+    "title": "Ensure 'Prevent installation of devices using drivers that match these device setup classes: Also apply to matching devices that are already installed.' is set to 'True' (checked)",
     "emitted": true,
     "gate": "win11cis_bitlocker",
     "file": "section_18/cis_18.9.7.x/cis_18.9.7.1.3.yml",
@@ -3633,47 +3815,8 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.7.1.4",
-    "title": "(BL) Ensure 'Prevent installation of devices using drivers that match these device setup classes' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.9.7.x/cis_18.9.7.1.4.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.7.1.5",
-    "title": "(BL) Ensure 'Prevent installation of devices using drivers that match these device setup classes: Prevent installation of devices using drivers for these device setup' is set to 'IEEE 1394 device setup classes'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.9.7.x/cis_18.9.7.1.5.yml",
-    "assertions": 4,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.7.1.6",
-    "title": "(BL) Ensure 'Prevent installation of devices using drivers that match these device setup classes: Also apply to matching devices that are already installed.' is set to 'True' (checked)",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.9.7.x/cis_18.9.7.1.6.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
     "rule_id": "18.9.7.2",
-    "title": "Ensure 'Prevent device metadata retrieval from the Internet' is set to 'Enabled'",
+    "title": "Ensure 'Prevent automatic download of applications associated with device metadata' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.7.x/cis_18.9.7.2.yml",
@@ -3698,8 +3841,21 @@
     "reason": null
   },
   {
+    "rule_id": "18.9.17.1",
+    "title": "Ensure 'Enable / disable CLFS logfile authentication' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.17.x/cis_18.9.17.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
     "rule_id": "18.9.19.2",
-    "title": "Ensure 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'",
+    "title": "Ensure 'Configure security policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.19.x/cis_18.9.19.2.yml",
@@ -3712,7 +3868,7 @@
   },
   {
     "rule_id": "18.9.19.3",
-    "title": "Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'",
+    "title": "Ensure 'Configure security policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.19.x/cis_18.9.19.3.yml",
@@ -3725,7 +3881,7 @@
   },
   {
     "rule_id": "18.9.19.4",
-    "title": "Ensure 'Configure security policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'",
+    "title": "Ensure 'Continue experiences on this device' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.19.x/cis_18.9.19.4.yml",
@@ -3738,36 +3894,10 @@
   },
   {
     "rule_id": "18.9.19.5",
-    "title": "Ensure 'Configure security policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.19.x/cis_18.9.19.5.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.19.6",
-    "title": "Ensure 'Continue experiences on this device' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.19.x/cis_18.9.19.6.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.19.7",
     "title": "Ensure 'Turn off background refresh of Group Policy' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.19.x/cis_18.9.19.7.yml",
+    "file": "section_18/cis_18.9.19.x/cis_18.9.19.5.yml",
     "assertions": 2,
     "resources": [
       "registry"
@@ -3972,7 +4102,7 @@
   },
   {
     "rule_id": "18.9.24.1",
-    "title": "(BL) Ensure 'Enumeration policy for external devices incompatible with Kernel DMA Protection' is set to 'Enabled: Block All'",
+    "title": "Ensure 'Enumeration policy for external devices incompatible with Kernel DMA Protection' is set to 'Enabled: Block All'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
     "file": "section_18/cis_18.9.24.x/cis_18.9.24.1.yml",
@@ -3984,112 +4114,8 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.25.1",
-    "title": "Ensure 'Configure password backup directory' is set to 'Enabled: Active Directory' or 'Enabled: Azure Active Directory'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.25.x/cis_18.9.25.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.25.2",
-    "title": "Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.25.x/cis_18.9.25.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.25.3",
-    "title": "Ensure 'Enable password encryption' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.25.x/cis_18.9.25.3.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.25.4",
-    "title": "Ensure 'Password Settings: Password Complexity' is set to 'Enabled: Large letters + small letters + numbers + special characters'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.25.x/cis_18.9.25.4.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.25.5",
-    "title": "Ensure 'Password Settings: Password Length' is set to 'Enabled: 15 or more'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.25.x/cis_18.9.25.5.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.25.6",
-    "title": "Ensure 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.25.x/cis_18.9.25.6.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.25.7",
-    "title": "Ensure 'Post-authentication actions: Grace period (hours)' is set to 'Enabled: 8 or fewer hours, but not 0'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.25.x/cis_18.9.25.7.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.9.25.8",
-    "title": "Ensure 'Post-authentication actions: Actions' is set to 'Enabled: Reset the password and logoff the managed account' or higher",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.25.x/cis_18.9.25.8.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
     "rule_id": "18.9.26.1",
-    "title": "Ensure 'Allow Custom SSPs and APs to be loaded into LSASS' is set to 'Disabled'",
+    "title": "Ensure 'Configure password backup directory' is set to 'Enabled: Active Directory' or 'Enabled: Azure Active Directory'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.26.x/cis_18.9.26.1.yml",
@@ -4102,7 +4128,7 @@
   },
   {
     "rule_id": "18.9.26.2",
-    "title": "Ensure 'Configures LSASS to run as a protected process' is set to 'Enabled: Enabled with UEFI Lock'",
+    "title": "Ensure 'Do not allow password expiration time longer than required by policy' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.26.x/cis_18.9.26.2.yml",
@@ -4114,10 +4140,88 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.27.1",
-    "title": "Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled'",
+    "rule_id": "18.9.26.3",
+    "title": "Ensure 'Enable password encryption' is set to 'Enabled'",
     "emitted": true,
-    "gate": "win11cis_level_2",
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.26.x/cis_18.9.26.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.26.4",
+    "title": "Ensure 'Password Settings: Password Complexity' is set to 'Enabled: Large letters + small letters + numbers + specials' or higher",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.26.x/cis_18.9.26.4.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.26.5",
+    "title": "Ensure 'Password Settings: Password Length' is set to 'Enabled: 15 or more'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.26.x/cis_18.9.26.5.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.26.6",
+    "title": "Ensure 'Password Settings: Password Age (Days)' is set to 'Enabled: 30 or fewer'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.26.x/cis_18.9.26.6.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.26.7",
+    "title": "Ensure 'Post-authentication actions: Grace period (hours)' is set to 'Enabled: 8 or fewer hours, but not 0'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.26.x/cis_18.9.26.7.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.26.8",
+    "title": "Ensure 'Post-authentication actions: Actions' is set to 'Enabled: Reset the password and logoff the managed account' or higher",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.26.x/cis_18.9.26.8.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.27.1",
+    "title": "Ensure 'Allow Custom SSPs and APs to be loaded into LSASS' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.27.x/cis_18.9.27.1.yml",
     "assertions": 1,
     "resources": [
@@ -4127,10 +4231,23 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.28.1",
-    "title": "Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'",
+    "rule_id": "18.9.27.2",
+    "title": "Ensure 'Configures LSASS to run as a protected process' is set to 'Enabled: Enabled with UEFI Lock'",
     "emitted": true,
     "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.27.x/cis_18.9.27.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.28.1",
+    "title": "Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
     "file": "section_18/cis_18.9.28.x/cis_18.9.28.1.yml",
     "assertions": 1,
     "resources": [
@@ -4140,11 +4257,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.28.2",
+    "rule_id": "18.9.29.1",
+    "title": "Ensure 'Block user from showing account details on sign-in' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.29.x/cis_18.9.29.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.29.2",
     "title": "Ensure 'Do not display network selection UI' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.28.x/cis_18.9.28.2.yml",
+    "file": "section_18/cis_18.9.29.x/cis_18.9.29.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4153,11 +4283,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.28.3",
-    "title": "Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'",
+    "rule_id": "18.9.29.3",
+    "title": "Ensure 'Do not enumerate connected users on domain- joined computers' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.28.x/cis_18.9.28.3.yml",
+    "file": "section_18/cis_18.9.29.x/cis_18.9.29.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4166,11 +4296,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.28.4",
+    "rule_id": "18.9.29.4",
     "title": "Ensure 'Enumerate local users on domain-joined computers' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.28.x/cis_18.9.28.4.yml",
+    "file": "section_18/cis_18.9.29.x/cis_18.9.29.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4179,11 +4309,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.28.5",
+    "rule_id": "18.9.29.5",
     "title": "Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.28.x/cis_18.9.28.5.yml",
+    "file": "section_18/cis_18.9.29.x/cis_18.9.29.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4192,11 +4322,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.28.6",
+    "rule_id": "18.9.29.6",
     "title": "Ensure 'Turn off picture password sign-in' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.28.x/cis_18.9.28.6.yml",
+    "file": "section_18/cis_18.9.29.x/cis_18.9.29.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4205,11 +4335,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.28.7",
+    "rule_id": "18.9.29.7",
     "title": "Ensure 'Turn on convenience PIN sign-in' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.28.x/cis_18.9.28.7.yml",
+    "file": "section_18/cis_18.9.29.x/cis_18.9.29.7.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4218,11 +4348,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.31.1",
+    "rule_id": "18.9.31.1.1",
+    "title": "Ensure 'Block NetBIOS-based discovery for domain controller location' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.31.x/cis_18.9.31.1.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.33.1",
     "title": "Ensure 'Allow Clipboard synchronization across devices' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.9.31.x/cis_18.9.31.1.yml",
+    "file": "section_18/cis_18.9.33.x/cis_18.9.33.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4231,11 +4374,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.31.2",
+    "rule_id": "18.9.33.2",
     "title": "Ensure 'Allow upload of User Activities' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.9.31.x/cis_18.9.31.2.yml",
+    "file": "section_18/cis_18.9.33.x/cis_18.9.33.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4244,11 +4387,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.33.6.1",
-    "title": "Ensure 'Allow network connectivity during connected-standby (on battery)' is set to 'Disabled'",
+    "rule_id": "18.9.35.6.1",
+    "title": "Ensure 'Allow network connectivity during connected- standby (on battery)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.33.x/cis_18.9.33.6.1.yml",
+    "file": "section_18/cis_18.9.35.x/cis_18.9.35.6.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4257,11 +4400,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.33.6.2",
-    "title": "Ensure 'Allow network connectivity during connected-standby (plugged in)' is set to 'Disabled'",
+    "rule_id": "18.9.35.6.2",
+    "title": "Ensure 'Allow network connectivity during connected- standby (plugged in)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.33.x/cis_18.9.33.6.2.yml",
+    "file": "section_18/cis_18.9.35.x/cis_18.9.35.6.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4270,11 +4413,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.33.6.3",
-    "title": "(BL) Ensure 'Allow standby states (S1-S3) when sleeping (on battery)' is set to 'Disabled'",
+    "rule_id": "18.9.35.6.3",
+    "title": "Ensure 'Allow standby states (S1-S3) when sleeping (on battery)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.9.33.x/cis_18.9.33.6.3.yml",
+    "file": "section_18/cis_18.9.35.x/cis_18.9.35.6.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4283,11 +4426,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.33.6.4",
-    "title": "(BL) Ensure 'Allow standby states (S1-S3) when sleeping (plugged in)' is set to 'Disabled'",
+    "rule_id": "18.9.35.6.4",
+    "title": "Ensure 'Allow standby states (S1-S3) when sleeping (plugged in)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.9.33.x/cis_18.9.33.6.4.yml",
+    "file": "section_18/cis_18.9.35.x/cis_18.9.35.6.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4296,11 +4439,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.33.6.5",
+    "rule_id": "18.9.35.6.5",
     "title": "Ensure 'Require a password when a computer wakes (on battery)' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.33.x/cis_18.9.33.6.5.yml",
+    "file": "section_18/cis_18.9.35.x/cis_18.9.35.6.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4309,11 +4452,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.33.6.6",
+    "rule_id": "18.9.35.6.6",
     "title": "Ensure 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.33.x/cis_18.9.33.6.6.yml",
+    "file": "section_18/cis_18.9.35.x/cis_18.9.35.6.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4322,11 +4465,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.35.1",
+    "rule_id": "18.9.37.1",
     "title": "Ensure 'Configure Offer Remote Assistance' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.35.x/cis_18.9.35.1.yml",
+    "file": "section_18/cis_18.9.37.x/cis_18.9.37.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4335,11 +4478,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.35.2",
+    "rule_id": "18.9.37.2",
     "title": "Ensure 'Configure Solicited Remote Assistance' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.35.x/cis_18.9.35.2.yml",
+    "file": "section_18/cis_18.9.37.x/cis_18.9.37.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4348,11 +4491,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.36.1",
+    "rule_id": "18.9.38.1",
     "title": "Ensure 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.36.x/cis_18.9.36.1.yml",
+    "file": "section_18/cis_18.9.38.x/cis_18.9.38.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4361,11 +4504,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.36.2",
+    "rule_id": "18.9.38.2",
     "title": "Ensure 'Restrict Unauthenticated RPC clients' is set to 'Enabled: Authenticated'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.36.x/cis_18.9.36.2.yml",
+    "file": "section_18/cis_18.9.38.x/cis_18.9.38.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4374,11 +4517,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.47.5.1",
+    "rule_id": "18.9.41.1",
+    "title": "Ensure 'Configure SAM change password RPC methods policy' is set to 'Enabled: Block all change password RPC methods'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.41.x/cis_18.9.41.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.49.5.1",
     "title": "Ensure 'Microsoft Support Diagnostic Tool: Turn on MSDT interactive communication with support provider' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.9.47.x/cis_18.9.47.5.1.yml",
+    "file": "section_18/cis_18.9.49.x/cis_18.9.49.5.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4387,11 +4543,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.47.11.1",
+    "rule_id": "18.9.49.11.1",
     "title": "Ensure 'Enable/Disable PerfTrack' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.9.47.x/cis_18.9.47.11.1.yml",
+    "file": "section_18/cis_18.9.49.x/cis_18.9.49.11.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4400,11 +4556,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.49.1",
+    "rule_id": "18.9.51.1",
     "title": "Ensure 'Turn off the advertising ID' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.9.49.x/cis_18.9.49.1.yml",
+    "file": "section_18/cis_18.9.51.x/cis_18.9.51.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4413,11 +4569,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.51.1.1",
+    "rule_id": "18.9.53.1.1",
     "title": "Ensure 'Enable Windows NTP Client' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.51.x/cis_18.9.51.1.1.yml",
+    "file": "section_18/cis_18.9.53.x/cis_18.9.53.1.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4426,11 +4582,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.9.51.1.2",
+    "rule_id": "18.9.53.1.2",
     "title": "Ensure 'Enable Windows NTP Server' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.9.51.x/cis_18.9.51.1.2.yml",
+    "file": "section_18/cis_18.9.53.x/cis_18.9.53.1.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.9.54",
+    "title": "Ensure 'Configure the behavior of the sudo command' is set to 'Enabled: Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.9.x/cis_18.9.54.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4440,7 +4609,7 @@
   },
   {
     "rule_id": "18.10.3.1",
-    "title": "Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'",
+    "title": "Ensure 'Turn off API Sampling' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_18/cis_18.10.3.x/cis_18.10.3.1.yml",
@@ -4453,9 +4622,9 @@
   },
   {
     "rule_id": "18.10.3.2",
-    "title": "Ensure 'Prevent non-admin users from installing packaged Windows apps' is set to 'Enabled'",
+    "title": "Ensure 'Turn off Application Footprint' is set to 'Enabled'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_18/cis_18.10.3.x/cis_18.10.3.2.yml",
     "assertions": 1,
     "resources": [
@@ -4465,10 +4634,23 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.4.1",
-    "title": "Ensure 'Let Windows apps activate with voice while the system is locked' is set to 'Enabled: Force Deny'",
+    "rule_id": "18.10.3.3",
+    "title": "Ensure 'Turn off Install Tracing' is set to 'Enabled'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.3.x/cis_18.10.3.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.4.1",
+    "title": "Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
     "file": "section_18/cis_18.10.4.x/cis_18.10.4.1.yml",
     "assertions": 1,
     "resources": [
@@ -4478,8 +4660,34 @@
     "reason": null
   },
   {
+    "rule_id": "18.10.4.2",
+    "title": "Ensure 'Not allow per-user unsigned packages to install by default (requires explicitly allow per install)' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.4.x/cis_18.10.4.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.4.3",
+    "title": "Ensure 'Prevent non-admin users from installing packaged Windows apps' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.4.x/cis_18.10.4.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
     "rule_id": "18.10.5.1",
-    "title": "Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'",
+    "title": "Ensure 'Let Windows apps activate with voice while the system is locked' is set to 'Enabled: Force Deny'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.5.x/cis_18.10.5.1.yml",
@@ -4491,11 +4699,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.5.2",
+    "rule_id": "18.10.6.1",
+    "title": "Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.6.x/cis_18.10.6.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.6.2",
     "title": "Ensure 'Block launching Universal Windows apps with Windows Runtime API access from hosted content.' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.5.x/cis_18.10.5.2.yml",
+    "file": "section_18/cis_18.10.6.x/cis_18.10.6.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4504,11 +4725,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.7.1",
+    "rule_id": "18.10.8.1",
     "title": "Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.7.x/cis_18.10.7.1.yml",
+    "file": "section_18/cis_18.10.8.x/cis_18.10.8.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4517,11 +4738,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.7.2",
+    "rule_id": "18.10.8.2",
     "title": "Ensure 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.7.x/cis_18.10.7.2.yml",
+    "file": "section_18/cis_18.10.8.x/cis_18.10.8.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4530,24 +4751,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.7.3",
+    "rule_id": "18.10.8.3",
     "title": "Ensure 'Turn off Autoplay' is set to 'Enabled: All drives'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.7.x/cis_18.10.7.3.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.8.1.1",
-    "title": "Ensure 'Configure enhanced anti-spoofing' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.8.x/cis_18.10.8.1.1.yml",
+    "file": "section_18/cis_18.10.8.x/cis_18.10.8.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4557,9 +4765,9 @@
   },
   {
     "rule_id": "18.10.9.1.1",
-    "title": "(BL) Ensure 'Allow access to BitLocker-protected fixed data drives from earlier versions of Windows' is set to 'Disabled'",
+    "title": "Ensure 'Configure enhanced anti-spoofing' is set to 'Enabled'",
     "emitted": true,
-    "gate": "win11cis_bitlocker",
+    "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.1.yml",
     "assertions": 1,
     "resources": [
@@ -4569,11 +4777,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.2",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered' is set to 'Enabled'",
+    "rule_id": "18.10.10.1.1",
+    "title": "Ensure 'Allow access to BitLocker-protected fixed data drives from earlier versions of Windows' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.2.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4582,11 +4790,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.3",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Allow data recovery agent' is set to 'Enabled: True'",
+    "rule_id": "18.10.10.1.2",
+    "title": "Ensure 'Choose how BitLocker-protected fixed drives can be recovered' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.3.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4595,11 +4803,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.4",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Recovery Password' is set to 'Enabled: Allow 48-digit recovery password' or higher",
+    "rule_id": "18.10.10.1.3",
+    "title": "Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Allow data recovery agent' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.4.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4608,11 +4816,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.5",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Recovery Key' is set to 'Enabled: Allow 256-bit recovery key' or higher",
+    "rule_id": "18.10.10.1.4",
+    "title": "Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Recovery Password' is set to 'Enabled: Allow 48-digit recovery password' or higher",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.5.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4621,11 +4829,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.6",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'",
+    "rule_id": "18.10.10.1.5",
+    "title": "Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Recovery Key' is set to 'Enabled: Allow 256-bit recovery key' or higher",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.6.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4634,11 +4842,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.7",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Save BitLocker recovery information to AD DS for fixed data drives' is set to 'Enabled: False'",
+    "rule_id": "18.10.10.1.6",
+    "title": "Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.7.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4647,11 +4855,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.8",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Configure storage of BitLocker recovery information to AD DS' is set to 'Enabled: Backup recovery passwords and key packages'",
+    "rule_id": "18.10.10.1.7",
+    "title": "Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Save BitLocker recovery information to AD DS for fixed data drives' is set to 'Enabled: False'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.8.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.7.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4660,11 +4868,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.9",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives' is set to 'Enabled: False'",
+    "rule_id": "18.10.10.1.8",
+    "title": "Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Configure storage of BitLocker recovery information to AD DS' is set to 'Enabled: Backup recovery passwords and key packages'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.9.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.8.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4673,11 +4881,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.10",
-    "title": "(BL) Ensure 'Configure use of hardware-based encryption for fixed data drives' is set to 'Disabled'",
+    "rule_id": "18.10.10.1.9",
+    "title": "Ensure 'Choose how BitLocker-protected fixed drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives' is set to 'Enabled: False'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.10.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.9.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4686,11 +4894,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.11",
-    "title": "(BL) Ensure 'Configure use of passwords for fixed data drives' is set to 'Disabled'",
+    "rule_id": "18.10.10.1.10",
+    "title": "Ensure 'Configure use of hardware-based encryption for fixed data drives' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.11.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.10.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4699,11 +4907,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.12",
-    "title": "(BL) Ensure 'Configure use of smart cards on fixed data drives' is set to 'Enabled'",
+    "rule_id": "18.10.10.1.11",
+    "title": "Ensure 'Configure use of passwords for fixed data drives' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.12.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.11.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4712,11 +4920,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.1.13",
-    "title": "(BL) Ensure 'Configure use of smart cards on fixed data drives: Require use of smart cards on fixed data drives' is set to 'Enabled: True'",
+    "rule_id": "18.10.10.1.12",
+    "title": "Ensure 'Configure use of smart cards on fixed data drives' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.1.13.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.12.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4725,11 +4933,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.1",
-    "title": "(BL) Ensure 'Allow enhanced PINs for startup' is set to 'Enabled'",
+    "rule_id": "18.10.10.1.13",
+    "title": "Ensure 'Configure use of smart cards on fixed data drives: Require use of smart cards on fixed data drives' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.1.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.13.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4738,11 +4946,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.2",
-    "title": "(BL) Ensure 'Allow Secure Boot for integrity validation' is set to 'Enabled'",
+    "rule_id": "18.10.10.2.1",
+    "title": "Ensure 'Allow enhanced PINs for startup' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.2.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4751,11 +4959,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.3",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered' is set to 'Enabled'",
+    "rule_id": "18.10.10.2.2",
+    "title": "Ensure 'Allow Secure Boot for integrity validation' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.3.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4764,11 +4972,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.4",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Allow data recovery agent' is set to 'Enabled: False'",
+    "rule_id": "18.10.10.2.3",
+    "title": "Ensure 'Choose how BitLocker-protected operating system drives can be recovered' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.4.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4777,11 +4985,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.5",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Recovery Password' is set to 'Enabled: Require 48-digit recovery password'",
+    "rule_id": "18.10.10.2.4",
+    "title": "Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Allow data recovery agent' is set to 'Enabled: False'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.5.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4790,11 +4998,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.6",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Recovery Key' is set to 'Enabled: Do not allow 256-bit recovery key'",
+    "rule_id": "18.10.10.2.5",
+    "title": "Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Recovery Password' is set to 'Enabled: Require 48-digit recovery password'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.6.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4803,11 +5011,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.7",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'",
+    "rule_id": "18.10.10.2.6",
+    "title": "Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Recovery Key' is set to 'Enabled: Do not allow 256-bit recovery key'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.7.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4816,11 +5024,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.8",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Save BitLocker recovery information to AD DS for operating system drives' is set to 'Enabled: True'",
+    "rule_id": "18.10.10.2.7",
+    "title": "Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.8.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.7.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4829,11 +5037,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.9",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Configure storage of BitLocker recovery information to AD DS:' is set to 'Enabled: Store recovery passwords and key packages'",
+    "rule_id": "18.10.10.2.8",
+    "title": "Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Save BitLocker recovery information to AD DS for operating system drives' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.9.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.8.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4842,11 +5050,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.10",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for operating system drives' is set to 'Enabled: True'",
+    "rule_id": "18.10.10.2.9",
+    "title": "Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Configure storage of BitLocker recovery information to AD DS:' is set to 'Enabled: Store recovery passwords and key packages'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.10.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.9.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4855,11 +5063,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.11",
-    "title": "(BL) Ensure 'Configure use of hardware-based encryption for operating system drives' is set to 'Disabled'",
+    "rule_id": "18.10.10.2.10",
+    "title": "Ensure 'Choose how BitLocker-protected operating system drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for operating system drives' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.11.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.10.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4868,11 +5076,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.12",
-    "title": "(BL) Ensure 'Configure use of passwords for operating system drives' is set to 'Disabled'",
+    "rule_id": "18.10.10.2.11",
+    "title": "Ensure 'Configure use of hardware-based encryption for operating system drives' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.12.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.2.11.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4881,11 +5089,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.13",
-    "title": "(BL) Ensure 'Require additional authentication at startup' is set to 'Enabled'",
+    "rule_id": "18.10.10.3.1",
+    "title": "Ensure 'Allow access to BitLocker-protected removable data drives from earlier versions of Windows' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.13.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4894,11 +5102,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.14",
-    "title": "(BL) Ensure 'Require additional authentication at startup: Allow BitLocker without a compatible TPM' is set to 'Enabled: False'",
+    "rule_id": "18.10.10.3.2",
+    "title": "Ensure 'Choose how BitLocker-protected removable drives can be recovered' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.14.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4907,11 +5115,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.15",
-    "title": "(BL) Ensure 'Require additional authentication at startup: Configure TPM startup:' is set to 'Enabled: Do not allow TPM'",
+    "rule_id": "18.10.10.3.3",
+    "title": "Ensure 'Choose how BitLocker-protected removable drives can be recovered: Allow data recovery agent' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.15.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4920,11 +5128,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.16",
-    "title": "(BL) Ensure 'Require additional authentication at startup: Configure TPM startup PIN:' is set to 'Enabled: Require startup PIN with TPM'",
+    "rule_id": "18.10.10.3.4",
+    "title": "Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Password' is set to 'Enabled: Do not allow 48-digit recovery password'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.16.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4933,11 +5141,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.17",
-    "title": "(BL) Ensure 'Require additional authentication at startup: Configure TPM startup key:' is set to 'Enabled: Do not allow startup key with TPM'",
+    "rule_id": "18.10.10.3.5",
+    "title": "Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Key' is set to 'Enabled: Do not allow 256-bit recovery key'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.17.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4946,11 +5154,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.2.18",
-    "title": "(BL) Ensure 'Require additional authentication at startup: Configure TPM startup key and PIN:' is set to 'Enabled: Do not allow startup key and PIN with TPM'",
+    "rule_id": "18.10.10.3.6",
+    "title": "Ensure 'Choose how BitLocker-protected removable drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.2.18.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4959,11 +5167,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.1",
-    "title": "(BL) Ensure 'Allow access to BitLocker-protected removable data drives from earlier versions of Windows' is set to 'Disabled'",
+    "rule_id": "18.10.10.3.7",
+    "title": "Ensure 'Choose how BitLocker-protected removable drives can be recovered: Save BitLocker recovery information to AD DS for removable data drives' is set to 'Enabled: False'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.1.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.7.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4972,11 +5180,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.2",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered' is set to 'Enabled'",
+    "rule_id": "18.10.10.3.8",
+    "title": "Ensure 'Choose how BitLocker-protected removable drives can be recovered: Configure storage of BitLocker recovery information to AD DS:' is set to 'Enabled: Backup recovery passwords and key packages'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.2.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.8.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4985,11 +5193,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.3",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Allow data recovery agent' is set to 'Enabled: True'",
+    "rule_id": "18.10.10.3.9",
+    "title": "Ensure 'Choose how BitLocker-protected removable drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for removable data drives' is set to 'Enabled: False'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.3.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.9.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -4998,11 +5206,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.4",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Password' is set to 'Enabled: Do not allow 48-digit recovery password'",
+    "rule_id": "18.10.10.3.10",
+    "title": "Ensure 'Configure use of hardware-based encryption for removable data drives' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.4.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.10.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5011,11 +5219,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.5",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Key' is set to 'Enabled: Do not allow 256-bit recovery key'",
+    "rule_id": "18.10.10.3.11",
+    "title": "Ensure 'Configure use of passwords for removable data drives' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.5.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.11.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5024,11 +5232,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.6",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Omit recovery options from the BitLocker setup wizard' is set to 'Enabled: True'",
+    "rule_id": "18.10.10.3.12",
+    "title": "Ensure 'Configure use of smart cards on removable data drives' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.6.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.12.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5037,11 +5245,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.7",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Save BitLocker recovery information to AD DS for removable data drives' is set to 'Enabled: False'",
+    "rule_id": "18.10.10.3.13",
+    "title": "Ensure 'Configure use of smart cards on removable data drives: Require use of smart cards on removable data drives' is set to 'Enabled: True'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.7.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.13.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5050,11 +5258,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.8",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Configure storage of BitLocker recovery information to AD DS:' is set to 'Enabled: Backup recovery passwords and key packages'",
+    "rule_id": "18.10.10.3.14",
+    "title": "Ensure 'Deny write access to removable drives not protected by BitLocker' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.8.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.14.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5063,11 +5271,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.9",
-    "title": "(BL) Ensure 'Choose how BitLocker-protected removable drives can be recovered: Do not enable BitLocker until recovery information is stored to AD DS for removable data drives' is set to 'Enabled: False'",
+    "rule_id": "18.10.10.3.15",
+    "title": "Ensure 'Deny write access to removable drives not protected by BitLocker: Do not allow write access to devices configured in another organization' is set to 'Enabled: False'",
     "emitted": true,
     "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.9.yml",
+    "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.15.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5076,141 +5284,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.9.3.10",
-    "title": "(BL) Ensure 'Configure use of hardware-based encryption for removable data drives' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.10.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.9.3.11",
-    "title": "(BL) Ensure 'Configure use of passwords for removable data drives' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.11.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.9.3.12",
-    "title": "(BL) Ensure 'Configure use of smart cards on removable data drives' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.12.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.9.3.13",
-    "title": "(BL) Ensure 'Configure use of smart cards on removable data drives: Require use of smart cards on removable data drives' is set to 'Enabled: True'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.13.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.9.3.14",
-    "title": "(BL) Ensure 'Deny write access to removable drives not protected by BitLocker' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.14.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.9.3.15",
-    "title": "(BL) Ensure 'Deny write access to removable drives not protected by BitLocker: Do not allow write access to devices configured in another organization' is set to 'Enabled: False'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.15.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.9.4",
-    "title": "(BL) Ensure 'Disable new DMA devices when this computer is locked' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_bitlocker",
-    "file": "section_18/cis_18.10.9.x/cis_18.10.9.4.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.10.1",
+    "rule_id": "18.10.11.1",
     "title": "Ensure 'Allow Use of Camera' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.10.x/cis_18.10.10.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.12.1",
-    "title": "Ensure 'Turn off cloud consumer account state content' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.12.x/cis_18.10.12.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.12.2",
-    "title": "Ensure 'Turn off cloud optimized content' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.12.x/cis_18.10.12.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.12.3",
-    "title": "Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.12.x/cis_18.10.12.3.yml",
+    "file": "section_18/cis_18.10.11.x/cis_18.10.11.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5220,7 +5298,7 @@
   },
   {
     "rule_id": "18.10.13.1",
-    "title": "Ensure 'Require pin for pairing' is set to 'Enabled: First Time' OR 'Enabled: Always'",
+    "title": "Ensure 'Turn off cloud consumer account state content' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.13.x/cis_18.10.13.1.yml",
@@ -5232,8 +5310,34 @@
     "reason": null
   },
   {
+    "rule_id": "18.10.13.2",
+    "title": "Ensure 'Turn off cloud optimized content' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.13.x/cis_18.10.13.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.13.3",
+    "title": "Ensure 'Turn off Microsoft consumer experiences' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.13.x/cis_18.10.13.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
     "rule_id": "18.10.14.1",
-    "title": "Ensure 'Do not display the password reveal button' is set to 'Enabled'",
+    "title": "Ensure 'Require pin for pairing' is set to 'Enabled: First Time' OR 'Enabled: Always'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.14.x/cis_18.10.14.1.yml",
@@ -5245,34 +5349,8 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.14.2",
-    "title": "Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.14.x/cis_18.10.14.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.14.3",
-    "title": "Ensure 'Prevent the use of security questions for local accounts' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.14.x/cis_18.10.14.3.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
     "rule_id": "18.10.15.1",
-    "title": "Ensure 'Allow Diagnostic Data' is set to 'Enabled: Diagnostic data off (not recommended)' or 'Enabled: Send required diagnostic data'",
+    "title": "Ensure 'Do not display the password reveal button' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.15.x/cis_18.10.15.1.yml",
@@ -5285,9 +5363,9 @@
   },
   {
     "rule_id": "18.10.15.2",
-    "title": "Ensure 'Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service' is set to 'Enabled: Disable Authenticated Proxy usage'",
+    "title": "Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled'",
     "emitted": true,
-    "gate": "win11cis_level_2",
+    "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.15.x/cis_18.10.15.2.yml",
     "assertions": 1,
     "resources": [
@@ -5298,7 +5376,7 @@
   },
   {
     "rule_id": "18.10.15.3",
-    "title": "Ensure 'Disable OneSettings Downloads' is set to 'Enabled'",
+    "title": "Ensure 'Prevent the use of security questions for local accounts' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.15.x/cis_18.10.15.3.yml",
@@ -5310,73 +5388,8 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.15.4",
-    "title": "Ensure 'Do not show feedback notifications' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.15.x/cis_18.10.15.4.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.15.5",
-    "title": "Ensure 'Enable OneSettings Auditing' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.15.x/cis_18.10.15.5.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.15.6",
-    "title": "Ensure 'Limit Diagnostic Log Collection' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.15.x/cis_18.10.15.6.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.15.7",
-    "title": "Ensure 'Limit Dump Collection' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.15.x/cis_18.10.15.7.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.15.8",
-    "title": "Ensure 'Toggle user control over Insider builds' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.15.x/cis_18.10.15.8.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
     "rule_id": "18.10.16.1",
-    "title": "Ensure 'Download Mode' is NOT set to 'Enabled: Internet'",
+    "title": "Ensure 'Allow Diagnostic Data' is set to 'Enabled: Diagnostic data off (not recommended)' or 'Enabled: Send required diagnostic data'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.16.x/cis_18.10.16.1.yml",
@@ -5388,8 +5401,73 @@
     "reason": null
   },
   {
+    "rule_id": "18.10.16.2",
+    "title": "Ensure 'Configure Authenticated Proxy usage for the Connected User Experience and Telemetry service' is set to 'Enabled: Disable Authenticated Proxy usage'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.16.x/cis_18.10.16.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.16.3",
+    "title": "Ensure 'Do not show feedback notifications' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.16.x/cis_18.10.16.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.16.4",
+    "title": "Ensure 'Enable OneSettings Auditing' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.16.x/cis_18.10.16.4.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.16.5",
+    "title": "Ensure 'Limit Diagnostic Log Collection' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.16.x/cis_18.10.16.5.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.16.6",
+    "title": "Ensure 'Limit Dump Collection' is set to 'Enabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.16.x/cis_18.10.16.6.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
     "rule_id": "18.10.17.1",
-    "title": "Ensure 'Enable App Installer' is set to 'Disabled'",
+    "title": "Ensure 'Download Mode' is NOT set to 'Enabled: Internet'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.17.x/cis_18.10.17.1.yml",
@@ -5401,11 +5479,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.17.2",
+    "rule_id": "18.10.18.1",
+    "title": "Ensure 'Enable App Installer' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.18.x/cis_18.10.18.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.18.2",
     "title": "Ensure 'Enable App Installer Experimental Features' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.17.x/cis_18.10.17.2.yml",
+    "file": "section_18/cis_18.10.18.x/cis_18.10.18.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5414,11 +5505,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.17.3",
+    "rule_id": "18.10.18.3",
     "title": "Ensure 'Enable App Installer Hash Override' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.17.x/cis_18.10.17.3.yml",
+    "file": "section_18/cis_18.10.18.x/cis_18.10.18.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5427,11 +5518,37 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.17.4",
+    "rule_id": "18.10.18.4",
+    "title": "Ensure 'Enable App Installer Local Archive Malware Scan Override' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.18.x/cis_18.10.18.4.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.18.5",
+    "title": "Ensure 'Enable App Installer Microsoft Store Source Certificate Validation Bypass' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.18.x/cis_18.10.18.5.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.18.6",
     "title": "Ensure 'Enable App Installer ms-appinstaller protocol' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.17.x/cis_18.10.17.4.yml",
+    "file": "section_18/cis_18.10.18.x/cis_18.10.18.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5440,11 +5557,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.25.1.1",
+    "rule_id": "18.10.18.7",
+    "title": "Ensure 'Enable Windows Package Manager command line interfaces' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.18.x/cis_18.10.18.7.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.26.1.1",
     "title": "Ensure 'Application: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.25.x/cis_18.10.25.1.1.yml",
+    "file": "section_18/cis_18.10.26.x/cis_18.10.26.1.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5453,11 +5583,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.25.1.2",
+    "rule_id": "18.10.26.1.2",
     "title": "Ensure 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.25.x/cis_18.10.25.1.2.yml",
+    "file": "section_18/cis_18.10.26.x/cis_18.10.26.1.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5466,11 +5596,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.25.2.1",
+    "rule_id": "18.10.26.2.1",
     "title": "Ensure 'Security: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.25.x/cis_18.10.25.2.1.yml",
+    "file": "section_18/cis_18.10.26.x/cis_18.10.26.2.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5479,11 +5609,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.25.2.2",
+    "rule_id": "18.10.26.2.2",
     "title": "Ensure 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.25.x/cis_18.10.25.2.2.yml",
+    "file": "section_18/cis_18.10.26.x/cis_18.10.26.2.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5492,11 +5622,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.25.3.1",
+    "rule_id": "18.10.26.3.1",
     "title": "Ensure 'Setup: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.25.x/cis_18.10.25.3.1.yml",
+    "file": "section_18/cis_18.10.26.x/cis_18.10.26.3.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5505,11 +5635,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.25.3.2",
+    "rule_id": "18.10.26.3.2",
     "title": "Ensure 'Setup: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.25.x/cis_18.10.25.3.2.yml",
+    "file": "section_18/cis_18.10.26.x/cis_18.10.26.3.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5518,11 +5648,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.25.4.1",
+    "rule_id": "18.10.26.4.1",
     "title": "Ensure 'System: Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.25.x/cis_18.10.25.4.1.yml",
+    "file": "section_18/cis_18.10.26.x/cis_18.10.26.4.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5531,11 +5661,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.25.4.2",
+    "rule_id": "18.10.26.4.2",
     "title": "Ensure 'System: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.25.x/cis_18.10.25.4.2.yml",
+    "file": "section_18/cis_18.10.26.x/cis_18.10.26.4.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5544,11 +5674,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.28.2",
+    "rule_id": "18.10.29.2",
+    "title": "Ensure 'Do not apply the Mark of the Web tag to files copied from insecure sources' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.29.x/cis_18.10.29.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.29.3",
     "title": "Ensure 'Turn off account-based insights, recent, favorite, and recommended files in File Explorer' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.28.x/cis_18.10.28.2.yml",
+    "file": "section_18/cis_18.10.29.x/cis_18.10.29.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5557,11 +5700,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.28.3",
+    "rule_id": "18.10.29.4",
     "title": "Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.28.x/cis_18.10.28.3.yml",
+    "file": "section_18/cis_18.10.29.x/cis_18.10.29.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5570,11 +5713,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.28.4",
+    "rule_id": "18.10.29.5",
     "title": "Ensure 'Turn off heap termination on corruption' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.28.x/cis_18.10.28.4.yml",
+    "file": "section_18/cis_18.10.29.x/cis_18.10.29.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5583,11 +5726,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.28.5",
+    "rule_id": "18.10.29.6",
     "title": "Ensure 'Turn off shell protocol protected mode' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.28.x/cis_18.10.28.5.yml",
+    "file": "section_18/cis_18.10.29.x/cis_18.10.29.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5627,214 +5770,6 @@
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.41.x/cis_18.10.41.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.5.1",
-    "title": "Ensure 'Configure local setting override for reporting to Microsoft MAPS' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.5.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.5.2",
-    "title": "Ensure 'Join Microsoft MAPS' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.5.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.6.1.1",
-    "title": "Ensure 'Configure Attack Surface Reduction rules' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.6.1.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.6.1.2",
-    "title": "Ensure 'Configure Attack Surface Reduction rules: Set the state for each ASR rule' is configured",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.6.1.2.yml",
-    "assertions": 13,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.6.3.1",
-    "title": "Ensure 'Prevent users and apps from accessing dangerous websites' is set to 'Enabled: Block'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.6.3.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.7.1",
-    "title": "Ensure 'Enable file hash computation feature' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.7.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.10.1",
-    "title": "Ensure 'Scan all downloaded files and attachments' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.10.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.10.2",
-    "title": "Ensure 'Turn off real-time protection' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.10.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.10.3",
-    "title": "Ensure 'Turn on behavior monitoring' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.10.3.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.10.4",
-    "title": "Ensure 'Turn on script scanning' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.10.4.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.12.1",
-    "title": "Ensure 'Configure Watson events' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.12.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.13.1",
-    "title": "Ensure 'Scan packed executables' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.13.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.13.2",
-    "title": "Ensure 'Scan removable drives' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.13.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.13.3",
-    "title": "Ensure 'Turn on e-mail scanning' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.13.3.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.16",
-    "title": "Ensure 'Configure detection for potentially unwanted applications' is set to 'Enabled: Block'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.16.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.42.17",
-    "title": "Ensure 'Turn off Microsoft Defender AntiVirus' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.42.x/cis_18.10.42.17.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5937,7 +5872,7 @@
     "rule_id": "18.10.50.1",
     "title": "Ensure 'Prevent the usage of OneDrive for file storage' is set to 'Enabled'",
     "emitted": true,
-    "gate": "win11cis_level_1",
+    "gate": "win11cis_level_2",
     "file": "section_18/cis_18.10.50.x/cis_18.10.50.1.yml",
     "assertions": 1,
     "resources": [
@@ -5947,11 +5882,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.55.1",
+    "rule_id": "18.10.56.1",
     "title": "Ensure 'Turn off Push To Install service' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.55.x/cis_18.10.55.1.yml",
+    "file": "section_18/cis_18.10.56.x/cis_18.10.56.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5960,11 +5895,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.2.2",
+    "rule_id": "18.10.57.2.2",
     "title": "Ensure 'Disable Cloud Clipboard integration for server-to-client data transfer' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.2.2.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.2.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5973,11 +5908,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.2.3",
+    "rule_id": "18.10.57.2.3",
     "title": "Ensure 'Do not allow passwords to be saved' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.2.3.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.2.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5986,11 +5921,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.2.1",
+    "rule_id": "18.10.57.3.2.1",
     "title": "Ensure 'Allow users to connect remotely by using Remote Desktop Services' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.2.1.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.2.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -5999,11 +5934,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.3.1",
+    "rule_id": "18.10.57.3.3.1",
     "title": "Ensure 'Allow UI Automation redirection' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.3.1.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.3.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6012,11 +5947,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.3.2",
+    "rule_id": "18.10.57.3.3.2",
     "title": "Ensure 'Do not allow COM port redirection' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.3.2.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.3.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6025,11 +5960,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.3.3",
+    "rule_id": "18.10.57.3.3.3",
     "title": "Ensure 'Do not allow drive redirection' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.3.3.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.3.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6038,11 +5973,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.3.4",
+    "rule_id": "18.10.57.3.3.4",
     "title": "Ensure 'Do not allow location redirection' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.3.4.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.3.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6051,11 +5986,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.3.5",
+    "rule_id": "18.10.57.3.3.5",
     "title": "Ensure 'Do not allow LPT port redirection' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.3.5.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.3.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6064,11 +5999,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.3.6",
+    "rule_id": "18.10.57.3.3.6",
     "title": "Ensure 'Do not allow supported Plug and Play device redirection' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.3.6.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.3.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6077,11 +6012,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.3.7",
+    "rule_id": "18.10.57.3.3.7",
     "title": "Ensure 'Do not allow WebAuthn redirection' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.3.7.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.3.7.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6090,11 +6025,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.9.1",
+    "rule_id": "18.10.57.3.3.8",
+    "title": "Ensure 'Restrict clipboard transfer from server to client' is set to 'Enabled: Disable clipboard transfers from server to client'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.3.8.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.57.3.9.1",
     "title": "Ensure 'Always prompt for password upon connection' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.9.1.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.9.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6103,11 +6051,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.9.2",
+    "rule_id": "18.10.57.3.9.2",
     "title": "Ensure 'Require secure RPC communication' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.9.2.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.9.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6116,11 +6064,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.9.3",
+    "rule_id": "18.10.57.3.9.3",
     "title": "Ensure 'Require use of specific security layer for remote (RDP) connections' is set to 'Enabled: SSL'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.9.3.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.9.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6129,11 +6077,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.9.4",
+    "rule_id": "18.10.57.3.9.4",
     "title": "Ensure 'Require user authentication for remote connections by using Network Level Authentication' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.9.4.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.9.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6142,11 +6090,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.9.5",
+    "rule_id": "18.10.57.3.9.5",
     "title": "Ensure 'Set client connection encryption level' is set to 'Enabled: High Level'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.9.5.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.9.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6155,11 +6103,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.10.1",
+    "rule_id": "18.10.57.3.10.1",
     "title": "Ensure 'Set time limit for active but idle Remote Desktop Services sessions' is set to 'Enabled: 15 minutes or less, but not Never (0)'",
     "emitted": true,
-    "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.10.1.yml",
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.10.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6168,24 +6116,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.56.3.10.2",
-    "title": "Ensure 'Set time limit for disconnected sessions' is set to 'Enabled: 1 minute'",
-    "emitted": true,
-    "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.10.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.56.3.11.1",
+    "rule_id": "18.10.57.3.11.1",
     "title": "Ensure 'Do not delete temp folders upon exit' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.56.x/cis_18.10.56.3.11.1.yml",
+    "file": "section_18/cis_18.10.57.x/cis_18.10.57.3.11.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6194,11 +6129,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.57.1",
+    "rule_id": "18.10.58.1",
     "title": "Ensure 'Prevent downloading of enclosures' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.57.x/cis_18.10.57.1.yml",
+    "file": "section_18/cis_18.10.58.x/cis_18.10.58.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6207,11 +6142,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.58.2",
+    "rule_id": "18.10.59.2",
     "title": "Ensure 'Allow Cloud Search' is set to 'Enabled: Disable Cloud Search'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.58.x/cis_18.10.58.2.yml",
+    "file": "section_18/cis_18.10.59.x/cis_18.10.59.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6220,11 +6155,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.58.3",
+    "rule_id": "18.10.59.3",
     "title": "Ensure 'Allow Cortana' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.58.x/cis_18.10.58.3.yml",
+    "file": "section_18/cis_18.10.59.x/cis_18.10.59.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6233,11 +6168,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.58.4",
+    "rule_id": "18.10.59.4",
     "title": "Ensure 'Allow Cortana above lock screen' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.58.x/cis_18.10.58.4.yml",
+    "file": "section_18/cis_18.10.59.x/cis_18.10.59.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6246,11 +6181,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.58.5",
+    "rule_id": "18.10.59.5",
     "title": "Ensure 'Allow indexing of encrypted files' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.58.x/cis_18.10.58.5.yml",
+    "file": "section_18/cis_18.10.59.x/cis_18.10.59.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6259,11 +6194,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.58.6",
+    "rule_id": "18.10.59.6",
     "title": "Ensure 'Allow search and Cortana to use location' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.58.x/cis_18.10.58.6.yml",
+    "file": "section_18/cis_18.10.59.x/cis_18.10.59.6.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6272,11 +6207,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.58.7",
+    "rule_id": "18.10.59.7",
     "title": "Ensure 'Allow search highlights' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.58.x/cis_18.10.58.7.yml",
+    "file": "section_18/cis_18.10.59.x/cis_18.10.59.7.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6285,11 +6220,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.62.1",
+    "rule_id": "18.10.63.1",
     "title": "Ensure 'Turn off KMS Client Online AVS Validation' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.62.x/cis_18.10.62.1.yml",
+    "file": "section_18/cis_18.10.63.x/cis_18.10.63.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6298,11 +6233,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.65.1",
+    "rule_id": "18.10.66.1",
     "title": "Ensure 'Disable all apps from Microsoft Store' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.65.x/cis_18.10.65.1.yml",
+    "file": "section_18/cis_18.10.66.x/cis_18.10.66.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6311,24 +6246,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.65.2",
-    "title": "Ensure 'Only display the private store within the Microsoft Store' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.65.x/cis_18.10.65.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.65.3",
+    "rule_id": "18.10.66.2",
     "title": "Ensure 'Turn off Automatic Download and Install of updates' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.65.x/cis_18.10.65.3.yml",
+    "file": "section_18/cis_18.10.66.x/cis_18.10.66.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6337,11 +6259,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.65.4",
+    "rule_id": "18.10.66.3",
     "title": "Ensure 'Turn off the offer to update to the latest version of Windows' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.65.x/cis_18.10.65.4.yml",
+    "file": "section_18/cis_18.10.66.x/cis_18.10.66.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6350,11 +6272,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.65.5",
+    "rule_id": "18.10.66.4",
     "title": "Ensure 'Turn off the Store application' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.65.x/cis_18.10.65.5.yml",
+    "file": "section_18/cis_18.10.66.x/cis_18.10.66.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6363,11 +6285,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.71.1",
+    "rule_id": "18.10.72.1",
     "title": "Ensure 'Allow widgets' is set to 'Disabled'",
     "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.71.x/cis_18.10.71.1.yml",
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.72.x/cis_18.10.72.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6376,11 +6298,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.75.1.1",
+    "rule_id": "18.10.73.1",
+    "title": "Ensure 'Allow Recall to be enabled' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.73.x/cis_18.10.73.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.77.1.1",
     "title": "Ensure 'Automatic Data Collection' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.75.x/cis_18.10.75.1.1.yml",
+    "file": "section_18/cis_18.10.77.x/cis_18.10.77.1.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6389,11 +6324,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.75.1.2",
+    "rule_id": "18.10.77.1.2",
     "title": "Ensure 'Notify Malicious' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.75.x/cis_18.10.75.1.2.yml",
+    "file": "section_18/cis_18.10.77.x/cis_18.10.77.1.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6402,11 +6337,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.75.1.3",
+    "rule_id": "18.10.77.1.3",
     "title": "Ensure 'Notify Password Reuse' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.75.x/cis_18.10.75.1.3.yml",
+    "file": "section_18/cis_18.10.77.x/cis_18.10.77.1.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6415,11 +6350,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.75.1.4",
+    "rule_id": "18.10.77.1.4",
     "title": "Ensure 'Notify Unsafe App' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.75.x/cis_18.10.75.1.4.yml",
+    "file": "section_18/cis_18.10.77.x/cis_18.10.77.1.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6428,11 +6363,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.75.1.5",
+    "rule_id": "18.10.77.1.5",
     "title": "Ensure 'Service Enabled' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.75.x/cis_18.10.75.1.5.yml",
+    "file": "section_18/cis_18.10.77.x/cis_18.10.77.1.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6441,11 +6376,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.75.2.1",
+    "rule_id": "18.10.77.2.1",
     "title": "Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.75.x/cis_18.10.75.2.1.yml",
+    "file": "section_18/cis_18.10.77.x/cis_18.10.77.2.1.yml",
     "assertions": 2,
     "resources": [
       "registry"
@@ -6454,36 +6389,10 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.77.1",
+    "rule_id": "18.10.79.1",
     "title": "Ensure 'Enables or disables Windows Game Recording and Broadcasting' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.77.x/cis_18.10.77.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.78.1",
-    "title": "Ensure 'Enable ESS with Supported Peripherals' is set to 'Enabled: 1'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.78.x/cis_18.10.78.1.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.79.1",
-    "title": "Ensure 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_2",
     "file": "section_18/cis_18.10.79.x/cis_18.10.79.1.yml",
     "assertions": 1,
     "resources": [
@@ -6493,21 +6402,8 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.79.2",
-    "title": "Ensure 'Allow Windows Ink Workspace' is set to 'Enabled: On, but disallow access above lock' OR 'Enabled: Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.79.x/cis_18.10.79.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
     "rule_id": "18.10.80.1",
-    "title": "Ensure 'Allow user control over installs' is set to 'Disabled'",
+    "title": "Ensure 'Enable ESS with Supported Peripherals' is set to 'Enabled: 1'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.80.x/cis_18.10.80.1.yml",
@@ -6519,36 +6415,10 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.80.2",
-    "title": "Ensure 'Always install with elevated privileges' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.80.x/cis_18.10.80.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.80.3",
-    "title": "Ensure 'Prevent Internet Explorer security prompt for Windows Installer scripts' is set to 'Disabled'",
+    "rule_id": "18.10.81.1",
+    "title": "Ensure 'Allow suggested apps in Windows Ink Workspace' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.80.x/cis_18.10.80.3.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.81.1",
-    "title": "Ensure 'Enable MPR notifications for the system' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.81.x/cis_18.10.81.1.yml",
     "assertions": 1,
     "resources": [
@@ -6559,7 +6429,7 @@
   },
   {
     "rule_id": "18.10.81.2",
-    "title": "Ensure 'Sign-in and lock last interactive user automatically after a restart' is set to 'Disabled'",
+    "title": "Ensure 'Allow Windows Ink Workspace' is set to 'Enabled: On, but disallow access above lock' OR 'Enabled: Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.81.x/cis_18.10.81.2.yml",
@@ -6571,11 +6441,76 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.86.1",
+    "rule_id": "18.10.82.1",
+    "title": "Ensure 'Allow user control over installs' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.82.x/cis_18.10.82.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.82.2",
+    "title": "Ensure 'Always install with elevated privileges' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.82.x/cis_18.10.82.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.82.3",
+    "title": "Ensure 'Prevent Internet Explorer security prompt for Windows Installer scripts' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.82.x/cis_18.10.82.3.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.83.1",
+    "title": "Ensure 'Configure the transmission of the user's password in the content of MPR notifications sent by winlogon.' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.83.x/cis_18.10.83.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.83.2",
+    "title": "Ensure 'Sign-in and lock last interactive user automatically after a restart' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.83.x/cis_18.10.83.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.88.1",
     "title": "Ensure 'Turn on PowerShell Script Block Logging' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.86.x/cis_18.10.86.1.yml",
+    "file": "section_18/cis_18.10.88.x/cis_18.10.88.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6584,11 +6519,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.86.2",
+    "rule_id": "18.10.88.2",
     "title": "Ensure 'Turn on PowerShell Transcription' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.86.x/cis_18.10.86.2.yml",
+    "file": "section_18/cis_18.10.88.x/cis_18.10.88.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6597,11 +6532,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.88.1.1",
+    "rule_id": "18.10.90.1.1",
     "title": "Ensure 'Allow Basic authentication' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.88.x/cis_18.10.88.1.1.yml",
+    "file": "section_18/cis_18.10.90.x/cis_18.10.90.1.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6610,11 +6545,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.88.1.2",
+    "rule_id": "18.10.90.1.2",
     "title": "Ensure 'Allow unencrypted traffic' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.88.x/cis_18.10.88.1.2.yml",
+    "file": "section_18/cis_18.10.90.x/cis_18.10.90.1.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6623,11 +6558,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.88.1.3",
+    "rule_id": "18.10.90.1.3",
     "title": "Ensure 'Disallow Digest authentication' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.88.x/cis_18.10.88.1.3.yml",
+    "file": "section_18/cis_18.10.90.x/cis_18.10.90.1.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6636,11 +6571,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.88.2.1",
+    "rule_id": "18.10.90.2.1",
     "title": "Ensure 'Allow Basic authentication' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.88.x/cis_18.10.88.2.1.yml",
+    "file": "section_18/cis_18.10.90.x/cis_18.10.90.2.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6649,11 +6584,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.88.2.2",
+    "rule_id": "18.10.90.2.2",
     "title": "Ensure 'Allow remote server management through WinRM' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.88.x/cis_18.10.88.2.2.yml",
+    "file": "section_18/cis_18.10.90.x/cis_18.10.90.2.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6662,11 +6597,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.88.2.3",
+    "rule_id": "18.10.90.2.3",
     "title": "Ensure 'Allow unencrypted traffic' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.88.x/cis_18.10.88.2.3.yml",
+    "file": "section_18/cis_18.10.90.x/cis_18.10.90.2.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6675,11 +6610,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.88.2.4",
+    "rule_id": "18.10.90.2.4",
     "title": "Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.88.x/cis_18.10.88.2.4.yml",
+    "file": "section_18/cis_18.10.90.x/cis_18.10.90.2.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6688,11 +6623,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.89.1",
+    "rule_id": "18.10.91.1",
     "title": "Ensure 'Allow Remote Shell Access' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_18/cis_18.10.89.x/cis_18.10.89.1.yml",
+    "file": "section_18/cis_18.10.91.x/cis_18.10.91.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6701,11 +6636,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.90.1",
+    "rule_id": "18.10.92.1",
     "title": "Ensure 'Allow clipboard sharing with Windows Sandbox' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.90.x/cis_18.10.90.1.yml",
+    "file": "section_18/cis_18.10.92.x/cis_18.10.92.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6714,11 +6649,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.90.2",
+    "rule_id": "18.10.92.2",
+    "title": "Ensure 'Allow mapping folders into Windows Sandbox' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_2",
+    "file": "section_18/cis_18.10.92.x/cis_18.10.92.2.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.92.3",
     "title": "Ensure 'Allow networking in Windows Sandbox' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.90.x/cis_18.10.90.2.yml",
+    "file": "section_18/cis_18.10.92.x/cis_18.10.92.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6727,11 +6675,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.91.2.1",
+    "rule_id": "18.10.93.2.1",
     "title": "Ensure 'Prevent users from modifying settings' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.91.x/cis_18.10.91.2.1.yml",
+    "file": "section_18/cis_18.10.93.x/cis_18.10.93.2.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6740,11 +6688,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.92.1.1",
+    "rule_id": "18.10.94.1.1",
     "title": "Ensure 'No auto-restart with logged on users for scheduled automatic updates installations' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.1.1.yml",
+    "file": "section_18/cis_18.10.94.x/cis_18.10.94.1.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6753,11 +6701,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.92.2.1",
+    "rule_id": "18.10.94.2.1",
     "title": "Ensure 'Configure Automatic Updates' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.2.1.yml",
+    "file": "section_18/cis_18.10.94.x/cis_18.10.94.2.1.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6766,11 +6714,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.92.2.2",
+    "rule_id": "18.10.94.2.2",
     "title": "Ensure 'Configure Automatic Updates: Scheduled install day' is set to '0 - Every day'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.2.2.yml",
+    "file": "section_18/cis_18.10.94.x/cis_18.10.94.2.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6779,11 +6727,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.92.2.3",
+    "rule_id": "18.10.94.2.3",
     "title": "Ensure 'Enable features introduced via servicing that are off by default' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.2.3.yml",
+    "file": "section_18/cis_18.10.94.x/cis_18.10.94.2.3.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6792,11 +6740,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.92.2.4",
+    "rule_id": "18.10.94.2.4",
     "title": "Ensure 'Remove access to \u201cPause updates\u201d feature' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.2.4.yml",
+    "file": "section_18/cis_18.10.94.x/cis_18.10.94.2.4.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6805,11 +6753,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.92.4.1",
+    "rule_id": "18.10.94.4.1",
+    "title": "Ensure 'Enable optional updates' is set to 'Disabled'",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.10.94.x/cis_18.10.94.4.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.10.94.4.2",
     "title": "Ensure 'Manage preview builds' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.4.1.yml",
+    "file": "section_18/cis_18.10.94.x/cis_18.10.94.4.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6818,24 +6779,11 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.92.4.2",
-    "title": "Ensure 'Select when Preview Builds and Feature Updates are received' is set to 'Enabled: 180 or more days'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.4.2.yml",
-    "assertions": 1,
-    "resources": [
-      "registry"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "18.10.92.4.3",
+    "rule_id": "18.10.94.4.3",
     "title": "Ensure 'Select when Quality Updates are received' is set to 'Enabled: 0 days'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.4.3.yml",
+    "file": "section_18/cis_18.10.94.x/cis_18.10.94.4.3.yml",
     "assertions": 2,
     "resources": [
       "registry"
@@ -6844,11 +6792,24 @@
     "reason": null
   },
   {
-    "rule_id": "18.10.92.4.4",
-    "title": "Ensure 'Enable optional updates' is set to 'Disabled'",
+    "rule_id": "18.11.1",
+    "title": "Ensure 'Disable HTTP proxy features: Disable WPAD' is set to 'Enabled: Checked'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_18/cis_18.10.92.x/cis_18.10.92.4.4.yml",
+    "file": "section_18/cis_18.11.x/cis_18.11.1.yml",
+    "assertions": 1,
+    "resources": [
+      "registry"
+    ],
+    "hand_finish": false,
+    "reason": null
+  },
+  {
+    "rule_id": "18.11.2",
+    "title": "Ensure 'Disable HTTP proxy features: Disable proxy authentication' is set to 'Enabled: Disable authentication over loopback interfaces' or higher",
+    "emitted": true,
+    "gate": "win11cis_level_1",
+    "file": "section_18/cis_18.11.x/cis_18.11.2.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -6987,37 +6948,11 @@
     "reason": null
   },
   {
-    "rule_id": "19.7.38.1",
-    "title": "Ensure 'Turn off Windows Copilot' is set to 'Enabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_19/cis_19.7.38.x/cis_19.7.38.1.yml",
-    "assertions": 1,
-    "resources": [
-      "file"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "19.7.42.1",
-    "title": "Ensure 'Always install with elevated privileges' is set to 'Disabled'",
-    "emitted": true,
-    "gate": "win11cis_level_1",
-    "file": "section_19/cis_19.7.42.x/cis_19.7.42.1.yml",
-    "assertions": 1,
-    "resources": [
-      "file"
-    ],
-    "hand_finish": false,
-    "reason": null
-  },
-  {
-    "rule_id": "19.7.44.2.1",
+    "rule_id": "19.7.46.2.1",
     "title": "Ensure 'Prevent Codec Download' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_19/cis_19.7.44.2.x/cis_19.7.44.2.1.yml",
+    "file": "section_19/cis_19.7.46.2.x/cis_19.7.46.2.1.yml",
     "assertions": 1,
     "resources": [
       "file"

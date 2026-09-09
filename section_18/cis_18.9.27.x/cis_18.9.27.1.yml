@@ -1,15 +1,15 @@
 ---
 
-{{ if .Vars.win11cis_level_2 }}
+{{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_9_27_1 }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Control Panel\International\BlockUserInputMethodsForSignIn:
-    title: "18.9.27.1 | Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled' | BlockUserInputMethodsForSignIn"
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\System\AllowCustomSSPsAPs:
+    title: "18.9.27.1 | Ensure 'Allow Custom SSPs and APs to be loaded into LSASS' is set to 'Disabled' | AllowCustomSSPsAPs"
     exists: true
-    value: 1
+    value: 0
     type: REG_DWORD
     meta:
-      workstation: 2
+      workstation: 1
       CIS_ID:
         - 18.9.27.1
   {{ end }}

@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_6_7_2 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanServer\AuditClientDoesNotSupportSigning:
+    title: "18.6.7.2 | Ensure 'Audit client does not support signing' is set to 'Enabled' | AuditClientDoesNotSupportSigning"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.6.7.2
+  {{ end }}
+{{ end }}

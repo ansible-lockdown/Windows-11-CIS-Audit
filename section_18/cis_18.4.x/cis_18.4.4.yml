@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_4_4 }}
 registry:
-  HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters\SMB1:
-    title: "18.4.4 | Ensure 'Configure SMB v1 server' is set to 'Disabled' | SMB1"
+  HKLM\SOFTWARE\Microsoft\Cryptography\Wintrust\Config\EnableCertPaddingCheck:
+    title: "18.4.4 | Ensure 'Enable Certificate Padding' is set to 'Enabled' | EnableCertPaddingCheck"
     exists: true
-    value: 0
+    value: 1
     type: REG_DWORD
     meta:
       workstation: 1

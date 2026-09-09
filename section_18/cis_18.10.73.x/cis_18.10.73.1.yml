@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_10_73_1 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsAI\AllowRecallEnablement:
+    title: "18.10.73.1 | Ensure 'Allow Recall to be enabled' is set to 'Disabled' | AllowRecallEnablement"
+    exists: true
+    value: 0
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.10.73.1
+  {{ end }}
+{{ end }}

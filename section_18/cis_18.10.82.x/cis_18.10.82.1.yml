@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_10_82_1 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer\EnableUserControl:
+    title: "18.10.82.1 | Ensure 'Allow user control over installs' is set to 'Disabled' | EnableUserControl"
+    exists: true
+    value: 0
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.10.82.1
+  {{ end }}
+{{ end }}

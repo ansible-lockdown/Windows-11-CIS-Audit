@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_10_17_1 }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Windows\AppInstaller\EnableAppInstaller:
-    title: "18.10.17.1 | Ensure 'Enable App Installer' is set to 'Disabled' | EnableAppInstaller"
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization\DODownloadMode:
+    title: "18.10.17.1 | Ensure 'Download Mode' is NOT set to 'Enabled: Internet' | DODownloadMode"
     exists: true
-    value: 0
+    value: {{ .Vars.win11cis_do_download_mode }}
     type: REG_DWORD
     meta:
       workstation: 1

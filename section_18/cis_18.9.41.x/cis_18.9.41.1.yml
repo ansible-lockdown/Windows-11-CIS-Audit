@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_9_41_1 }}
+registry:
+  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\SAM\SamrChangeUserPasswordApiPolicy:
+    title: "18.9.41.1 | Ensure 'Configure SAM change password RPC methods policy' is set to 'Enabled: Block all change password RPC methods' | SamrChangeUserPasswordApiPolicy"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.9.41.1
+  {{ end }}
+{{ end }}

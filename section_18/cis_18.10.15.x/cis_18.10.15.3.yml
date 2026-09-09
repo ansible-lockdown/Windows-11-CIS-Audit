@@ -3,8 +3,8 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_10_15_3 }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\DisableOneSettingsDownloads:
-    title: "18.10.15.3 | Ensure 'Disable OneSettings Downloads' is set to 'Enabled' | DisableOneSettingsDownloads"
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\System\NoLocalPasswordResetQuestions:
+    title: "18.10.15.3 | Ensure 'Prevent the use of security questions for local accounts' is set to 'Enabled' | NoLocalPasswordResetQuestions"
     exists: true
     value: 1
     type: REG_DWORD

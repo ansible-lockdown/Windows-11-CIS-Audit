@@ -1,15 +1,15 @@
 ---
 
-{{ if .Vars.win11cis_level_1 }}
+{{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_18_10_3_2 }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Windows\Appx\BlockNonAdminUserInstall:
-    title: "18.10.3.2 | Ensure 'Prevent non-admin users from installing packaged Windows apps' is set to 'Enabled' | BlockNonAdminUserInstall"
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat\DisableApplicationFootprint:
+    title: "18.10.3.2 | Ensure 'Turn off Application Footprint' is set to 'Enabled' | DisableApplicationFootprint"
     exists: true
     value: 1
     type: REG_DWORD
     meta:
-      workstation: 1
+      workstation: 2
       CIS_ID:
         - 18.10.3.2
   {{ end }}

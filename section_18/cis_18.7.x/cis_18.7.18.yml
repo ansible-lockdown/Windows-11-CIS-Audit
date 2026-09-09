@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_2 }}
+  {{ if .Vars.win11cis_rule_18_7_18 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\IPP\SecurityFlagsBlockCertDateInvalid:
+    title: "18.7.18 | Ensure 'Set TLS/SSL security policy for IPP printers: Disallow invalid certificate date' is set to 'Enabled: Checked' | SecurityFlagsBlockCertDateInvalid"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 2
+      CIS_ID:
+        - 18.7.18
+  {{ end }}
+{{ end }}

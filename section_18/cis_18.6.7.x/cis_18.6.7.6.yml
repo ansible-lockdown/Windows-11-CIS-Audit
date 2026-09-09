@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_6_7_6 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanServer\MinSmb2Dialect:
+    title: "18.6.7.6 | Ensure 'Mandate the minimum version of SMB' is set to 'Enabled: 3.1.1' | MinSmb2Dialect"
+    exists: true
+    value: 785
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.6.7.6
+  {{ end }}
+{{ end }}

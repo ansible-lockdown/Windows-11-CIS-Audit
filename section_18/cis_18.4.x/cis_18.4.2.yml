@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_4_2 }}
 registry:
-  HKLM\SYSTEM\CurrentControlSet\Control\Print\RpcAuthnLevelPrivacyEnabled:
-    title: "18.4.2 | Ensure 'Configure RPC packet level privacy setting for incoming connections' is set to 'Enabled' | RpcAuthnLevelPrivacyEnabled"
+  HKLM\SYSTEM\CurrentControlSet\Services\mrxsmb10\Start:
+    title: "18.4.2 | Ensure 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver (recommended)' | Start"
     exists: true
-    value: 1
+    value: 4
     type: REG_DWORD
     meta:
       workstation: 1

@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_6_7_3 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanServer\AuditInsecureGuestLogon:
+    title: "18.6.7.3 | Ensure 'Audit insecure guest logon' is set to 'Enabled' | AuditInsecureGuestLogon"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.6.7.3
+  {{ end }}
+{{ end }}

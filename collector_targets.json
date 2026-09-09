@@ -208,22 +208,8 @@
     },
     {
       "data": 1,
-      "name": "TurnOffWindowsCopilot",
-      "rule": "19.7.38.1",
-      "subpath": "SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsCopilot",
-      "type": "REG_DWORD"
-    },
-    {
-      "data": 0,
-      "name": "AlwaysInstallElevated",
-      "rule": "19.7.42.1",
-      "subpath": "SOFTWARE\\Policies\\Microsoft\\Windows\\Installer",
-      "type": "REG_DWORD"
-    },
-    {
-      "data": 1,
       "name": "PreventCodecDownload",
-      "rule": "19.7.44.2.1",
+      "rule": "19.7.46.2.1",
       "subpath": "SOFTWARE\\Policies\\Microsoft\\WindowsMediaPlayer",
       "type": "REG_DWORD"
     }
@@ -266,7 +252,6 @@
     "SeSystemTimePrivilege",
     "SeTakeOwnershipPrivilege",
     "SeTcbPrivilege",
-    "SeTimeZonePrivilege",
     "SeTrustedCredManAccessPrivilege"
   ],
   "services": [
@@ -274,7 +259,6 @@
     "Browser",
     "FTPSVC",
     "LanmanServer",
-    "LxssManager",
     "MSiSCSI",
     "MapsBroker",
     "PNRPAutoReg",

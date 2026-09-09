@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_9_54 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\Sudo\Enabled:
+    title: "18.9.54 | Ensure 'Configure the behavior of the sudo command' is set to 'Enabled: Disabled' | Enabled"
+    exists: true
+    value: 0
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.9.54
+  {{ end }}
+{{ end }}

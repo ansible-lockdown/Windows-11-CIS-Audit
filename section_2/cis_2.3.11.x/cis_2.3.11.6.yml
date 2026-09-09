@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_2_3_11_6 }}
 registry:
-  HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters\EnableForcedLogOff:
-    title: "2.3.11.6 | Ensure 'Network security: Force logoff when logon hours expire' is set to 'Enabled' | EnableForcedLogOff"
+  HKLM\SYSTEM\CurrentControlSet\Control\Lsa\LMCompatibilityLevel:
+    title: "2.3.11.6 | Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' | LMCompatibilityLevel"
     exists: true
-    value: 1
+    value: 5
     type: REG_DWORD
     meta:
       workstation: 1

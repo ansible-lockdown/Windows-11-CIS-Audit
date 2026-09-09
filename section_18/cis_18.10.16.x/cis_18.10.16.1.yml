@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_10_16_1 }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization\DODownloadMode:
-    title: "18.10.16.1 | Ensure 'Download Mode' is NOT set to 'Enabled: Internet' | DODownloadMode"
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\AllowTelemetry:
+    title: "18.10.16.1 | Ensure 'Allow Diagnostic Data' is set to 'Enabled: Diagnostic data off (not recommended)' or 'Enabled: Send required diagnostic data' | AllowTelemetry"
     exists: true
-    value: {{ .Vars.win11cis_do_download_mode }}
+    value: {{ .Vars.win11cis_allow_telemetry }}
     type: REG_DWORD
     meta:
       workstation: 1

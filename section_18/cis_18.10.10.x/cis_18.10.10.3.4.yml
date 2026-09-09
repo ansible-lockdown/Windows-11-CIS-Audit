@@ -1,0 +1,17 @@
+---
+
+{{ if .Vars.win11cis_bitlocker }}
+  {{ if .Vars.win11cis_rule_18_10_10_3_4 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\FVE\RDVRecoveryPassword:
+    title: "18.10.10.3.4 | Ensure 'Choose how BitLocker-protected removable drives can be recovered: Recovery Password' is set to 'Enabled: Do not allow 48-digit recovery password' | RDVRecoveryPassword"
+    exists: true
+    value: 0
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      bitlocker: 1
+      CIS_ID:
+        - 18.10.10.3.4
+  {{ end }}
+{{ end }}

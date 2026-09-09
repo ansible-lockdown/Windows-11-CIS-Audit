@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_2 }}
+  {{ if .Vars.win11cis_rule_18_10_16_5 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\LimitDiagnosticLogCollection:
+    title: "18.10.16.5 | Ensure 'Limit Diagnostic Log Collection' is set to 'Enabled' | LimitDiagnosticLogCollection"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 2
+      CIS_ID:
+        - 18.10.16.5
+  {{ end }}
+{{ end }}

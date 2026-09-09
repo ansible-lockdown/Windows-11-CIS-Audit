@@ -1,15 +1,15 @@
 ---
 
-{{ if .Vars.win11cis_level_1 }}
+{{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_18_9_28_1 }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Windows\System\BlockUserFromShowingAccountDetailsOnSignin:
-    title: "18.9.28.1 | Ensure 'Block user from showing account details on sign-in' is set to 'Enabled' | BlockUserFromShowingAccountDetailsOnSignin"
+  HKLM\SOFTWARE\Policies\Microsoft\Control Panel\International\BlockUserInputMethodsForSignIn:
+    title: "18.9.28.1 | Ensure 'Disallow copying of user input methods to the system account for sign-in' is set to 'Enabled' | BlockUserInputMethodsForSignIn"
     exists: true
     value: 1
     type: REG_DWORD
     meta:
-      workstation: 1
+      workstation: 2
       CIS_ID:
         - 18.9.28.1
   {{ end }}

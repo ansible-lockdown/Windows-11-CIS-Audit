@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_2 }}
+  {{ if .Vars.win11cis_rule_18_7_15 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\IPP\SecurityFlagsBlockUnknownCA:
+    title: "18.7.15 | Ensure 'Set TLS/SSL security policy for IPP printers: Disallow invalid certificate authority' is set to 'Enabled: Checked' | SecurityFlagsBlockUnknownCA"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 2
+      CIS_ID:
+        - 18.7.15
+  {{ end }}
+{{ end }}

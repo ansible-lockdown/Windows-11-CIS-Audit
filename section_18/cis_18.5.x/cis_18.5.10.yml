@@ -1,15 +1,15 @@
 ---
 
-{{ if .Vars.win11cis_level_1 }}
+{{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_18_5_10 }}
 registry:
-  HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\ScreenSaverGracePeriod:
-    title: "18.5.10 | Ensure 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires' is set to 'Enabled: 5 or fewer seconds' | ScreenSaverGracePeriod"
+  HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\TcpMaxDataRetransmissions:
+    title: "18.5.10 | Ensure 'MSS: (TcpMaxDataRetransmissions IPv6) How many times unacknowledged data is retransmitted' is set to 'Enabled: 3' | TcpMaxDataRetransmissions"
     exists: true
-    value: '{{ .Vars.win11cis_screen_saver_grace_period }}'
-    type: REG_SZ
+    value: 3
+    type: REG_DWORD
     meta:
-      workstation: 1
+      workstation: 2
       CIS_ID:
         - 18.5.10
   {{ end }}

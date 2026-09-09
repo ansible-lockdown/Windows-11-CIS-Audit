@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_18_10_3_1 }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Appmodel\Statemanager\AllowSharedLocalAppData:
-    title: "18.10.3.1 | Ensure 'Allow a Windows app to share application data between users' is set to 'Disabled' | AllowSharedLocalAppData"
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat:DisableAPISamping Note\DisableAPISamping:
+    title: "18.10.3.1 | Ensure 'Turn off API Sampling' is set to 'Enabled' | DisableAPISamping"
     exists: true
-    value: 0
+    value: 1
     type: REG_DWORD
     meta:
       workstation: 2

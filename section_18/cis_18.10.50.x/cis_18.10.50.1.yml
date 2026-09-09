@@ -1,6 +1,6 @@
 ---
 
-{{ if .Vars.win11cis_level_1 }}
+{{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_18_10_50_1 }}
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\Windows\Onedrive\DisableFileSyncNGSC:
@@ -9,7 +9,7 @@ registry:
     value: 1
     type: REG_DWORD
     meta:
-      workstation: 1
+      workstation: 2
       CIS_ID:
         - 18.10.50.1
   {{ end }}

@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_2 }}
+  {{ if .Vars.win11cis_rule_18_10_16_6 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\LimitDumpCollection:
+    title: "18.10.16.6 | Ensure 'Limit Dump Collection' is set to 'Enabled' | LimitDumpCollection"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 2
+      CIS_ID:
+        - 18.10.16.6
+  {{ end }}
+{{ end }}

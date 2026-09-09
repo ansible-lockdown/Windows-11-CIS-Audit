@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_2 }}
+  {{ if .Vars.win11cis_rule_18_10_3_3 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\AppCompat\DisableInstallTracing:
+    title: "18.10.3.3 | Ensure 'Turn off Install Tracing' is set to 'Enabled' | DisableInstallTracing"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 2
+      CIS_ID:
+        - 18.10.3.3
+  {{ end }}
+{{ end }}

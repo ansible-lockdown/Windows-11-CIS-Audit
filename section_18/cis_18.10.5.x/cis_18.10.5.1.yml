@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_10_5_1 }}
 registry:
-  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\MSAOptional:
-    title: "18.10.5.1 | Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled' | MSAOptional"
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy\LetAppsActivateWithVoiceAboveLock:
+    title: "18.10.5.1 | Ensure 'Let Windows apps activate with voice while the system is locked' is set to 'Enabled: Force Deny' | LetAppsActivateWithVoiceAboveLock"
     exists: true
-    value: 1
+    value: 2
     type: REG_DWORD
     meta:
       workstation: 1

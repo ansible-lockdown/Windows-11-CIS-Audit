@@ -1,16 +1,16 @@
 ---
 
-{{ if .Vars.win11cis_level_1 }}
+{{ if .Vars.win11cis_level_2 }}
   {{ if .Vars.win11cis_rule_5_9 }}
 file:
-  win11cis_5_9_lxssmanager:
-    title: "5.9 | Ensure 'LxssManager (LxssManager)' is set to 'Disabled' or 'Not Installed' | LxssManager"
-    path: '{{ .Vars.win11cis_snapshot_dir }}\Service.LxssManager'
+  win11cis_5_9_lltdsvc:
+    title: "5.9 | Ensure 'Link-Layer Topology Discovery Mapper (lltdsvc)' is set to 'Disabled' | lltdsvc"
+    path: '{{ .Vars.win11cis_snapshot_dir }}\Service.lltdsvc'
     exists: true
     contents:
       - '/^(Disabled|NotInstalled)$/'
     meta:
-      workstation: 1
+      workstation: 2
       CIS_ID:
         - 5.9
   {{ end }}

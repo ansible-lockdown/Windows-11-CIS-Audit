@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_10_18_5 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\AppInstaller\EnableBypassCertificatePinningForMicrosoftStore:
+    title: "18.10.18.5 | Ensure 'Enable App Installer Microsoft Store Source Certificate Validation Bypass' is set to 'Disabled' | EnableBypassCertificatePinningForMicrosoftStore"
+    exists: true
+    value: 0
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.10.18.5
+  {{ end }}
+{{ end }}

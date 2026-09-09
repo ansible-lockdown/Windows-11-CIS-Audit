@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_6_7_7 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanServer\InvalidAuthenticationDelayTimeInMs:
+    title: "18.6.7.7 | Ensure 'Set authentication rate limiter delay (milliseconds)' is set to 'Enabled: 2000' or more | InvalidAuthenticationDelayTimeInMs"
+    exists: true
+    value: 2000
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.6.7.7
+  {{ end }}
+{{ end }}

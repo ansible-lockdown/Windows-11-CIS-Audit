@@ -3,8 +3,8 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_7_8 }}
 registry:
-  HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\PointAndPrint\RestrictDriverInstallationToAdministrators:
-    title: "18.7.8 | Ensure 'Limits print driver installation to Administrators' is set to 'Enabled' | RestrictDriverInstallationToAdministrators"
+  HKLM\SYSTEM\CurrentControlSet\Control\Print\RpcAuthnLevelPrivacyEnabled:
+    title: "18.7.8 | Ensure 'Configure RPC packet level privacy setting for incoming connections' is set to 'Enabled' | RpcAuthnLevelPrivacyEnabled"
     exists: true
     value: 1
     type: REG_DWORD

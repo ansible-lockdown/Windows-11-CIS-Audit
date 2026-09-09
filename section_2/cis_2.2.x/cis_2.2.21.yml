@@ -3,12 +3,12 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_2_2_21 }}
 file:
-  win11cis_2_2_21_seenabledelegationprivilege:
-    title: "2.2.21 | Ensure 'Enable computer and user accounts to be trusted for delegation' is set to 'No One' | SeEnableDelegationPrivilege"
-    path: '{{ .Vars.win11cis_snapshot_dir }}\PrivilegeRights.SeEnableDelegationPrivilege'
+  win11cis_2_2_21_seremoteshutdownprivilege:
+    title: "2.2.21 | Ensure 'Force shutdown from a remote system' is set to 'Administrators' | SeRemoteShutdownPrivilege"
+    path: '{{ .Vars.win11cis_snapshot_dir }}\PrivilegeRights.SeRemoteShutdownPrivilege'
     exists: true
     contents:
-      - '/^NONE$/'
+      - '/^S-1-5-32-544$/'
     meta:
       workstation: 1
       CIS_ID:

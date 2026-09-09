@@ -1,0 +1,16 @@
+---
+
+{{ if .Vars.win11cis_level_2 }}
+  {{ if .Vars.win11cis_rule_18_7_14 }}
+registry:
+  HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers\IPP\RequireIpps:
+    title: "18.7.14 | Ensure 'Require IPPS for IPP printers' is set to 'Enabled' | RequireIpps"
+    exists: true
+    value: 1
+    type: REG_DWORD
+    meta:
+      workstation: 2
+      CIS_ID:
+        - 18.7.14
+  {{ end }}
+{{ end }}

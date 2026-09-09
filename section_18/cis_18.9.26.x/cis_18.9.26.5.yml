@@ -1,0 +1,18 @@
+---
+
+{{ if .Vars.win11cis_level_1 }}
+  {{ if .Vars.win11cis_rule_18_9_26_5 }}
+    {{ if .Vars.win11cis_domain_joined }}
+registry:
+  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\LAPS\PasswordLength:
+    title: "18.9.26.5 | Ensure 'Password Settings: Password Length' is set to 'Enabled: 15 or more' | PasswordLength"
+    exists: true
+    value: {{ .Vars.win11cis_laps_password_length }}
+    type: REG_DWORD
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.9.26.5
+    {{ end }}
+  {{ end }}
+{{ end }}

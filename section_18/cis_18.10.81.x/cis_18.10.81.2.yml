@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_10_81_2 }}
 registry:
-  HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\DisableAutomaticRestartSignOn:
-    title: "18.10.81.2 | Ensure 'Sign-in and lock last interactive user automatically after a restart' is set to 'Disabled' | DisableAutomaticRestartSignOn"
+  HKLM\SOFTWARE\Policies\Microsoft\WindowsInkWorkspace\AllowWindowsInkWorkspace:
+    title: "18.10.81.2 | Ensure 'Allow Windows Ink Workspace' is set to 'Enabled: On, but disallow access above lock' OR 'Enabled: Disabled' | AllowWindowsInkWorkspace"
     exists: true
-    value: 1
+    value: {{ .Vars.win11cis_allow_windows_ink_workspace }}
     type: REG_DWORD
     meta:
       workstation: 1

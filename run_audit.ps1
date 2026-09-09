@@ -68,7 +68,7 @@ function Invoke-Syver {
 
 # Benchmark identity. Changes only on a new benchmark release.
 $Benchmark    = 'CIS'
-$BenchmarkVer = '3.0.0'
+$BenchmarkVer = '5.1.0'
 $BenchmarkOs  = 'Windows11'
 
 # Overridable from the environment, mirroring run_audit.sh

@@ -3,10 +3,10 @@
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_4_5 }}
 registry:
-  HKLM\SOFTWARE\Microsoft\Cryptography\Wintrust\Config\EnableCertPaddingCheck:
-    title: "18.4.5 | Ensure 'Enable Certificate Padding' is set to 'Enabled' | EnableCertPaddingCheck"
+  HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel\DisableExceptionChainValidation:
+    title: "18.4.5 | Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled' | DisableExceptionChainValidation"
     exists: true
-    value: 1
+    value: 0
     type: REG_DWORD
     meta:
       workstation: 1
