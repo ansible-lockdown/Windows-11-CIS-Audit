@@ -8,7 +8,7 @@ file:
     path: '{{ .Vars.win11cis_snapshot_dir }}\PrivilegeRights.SeAuditPrivilege'
     exists: true
     contents:
-      - '/^NAME:RESTRICTED SERVICES\\\\PrintSpoolerService,S-1-5-19,S-1-5-20$/'
+      - '/^S-1-5-19,S-1-5-20,S-1-5-99-216390572-1995538116-3857911515-2404958512-2623887229$/'
     meta:
       workstation: 1
       CIS_ID:
