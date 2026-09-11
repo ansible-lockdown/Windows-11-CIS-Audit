@@ -1,5 +1,11 @@
 # Changes to Windows11-CIS-Audit
 
+## September 2026 - 2.3.11.5 and domain members
+
+- 2.3.11.5 asserts ForceLogoffWhenHourExpire, not LanManServer EnableForcedLogOff
+- Collector captures ForceLogoffWhenHourExpire
+- Section 1 account policy and 2.3.11.5 reported as skipped on a domain joined host, with the reason in meta.skip_reason
+
 ## 2.0.0 based on CIS Benchmark v5.1.0
 
 - Regenerated in full from Private-Windows-11-CIS at benchmark v5.1.0
