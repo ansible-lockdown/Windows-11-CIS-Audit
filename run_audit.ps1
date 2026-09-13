@@ -69,7 +69,7 @@ function Invoke-Syver {
 # Benchmark identity. Changes only on a new benchmark release.
 $Benchmark    = 'CIS'
 $BenchmarkVer = '3.0.0'
-$BenchmarkOs  = 'Windows11'
+$BenchmarkOs  = 'Windows-11'
 
 # Overridable from the environment, mirroring run_audit.sh
 $AuditBin = if ($env:AUDIT_BIN) { $env:AUDIT_BIN } else { 'C:\Program Files\syver\syver.exe' }
