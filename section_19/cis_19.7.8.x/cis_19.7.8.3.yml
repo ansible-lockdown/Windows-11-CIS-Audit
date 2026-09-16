@@ -13,5 +13,7 @@ file:
       workstation: 2
       CIS_ID:
         - 19.7.8.3
+      NIST800-53R5:
+        - SI-4
   {{ end }}
 {{ end }}

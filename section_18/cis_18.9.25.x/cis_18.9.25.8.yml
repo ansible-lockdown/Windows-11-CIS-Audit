@@ -13,6 +13,8 @@ registry:
       workstation: 1
       CIS_ID:
         - 18.9.25.8
+      NIST800-53R5:
+        - IA-5(1)
     {{ end }}
   {{ end }}
 {{ end }}

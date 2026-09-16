@@ -12,5 +12,8 @@ registry:
       workstation: 2
       CIS_ID:
         - 18.9.20.1.5
+      NIST800-53R5:
+        - CM-6
+        - CM-7
   {{ end }}
 {{ end }}

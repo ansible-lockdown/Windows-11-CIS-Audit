@@ -15,5 +15,7 @@ file:
       workstation: 1
       CIS_ID:
         - 1.1.5
+      NIST800-53R5:
+        - IA-5(1)
   {{ end }}
 {{ end }}

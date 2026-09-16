@@ -13,5 +13,7 @@ file:
       workstation: 1
       CIS_ID:
         - 19.7.42.1
+      NIST800-53R5:
+        - AC-2(9)
   {{ end }}
 {{ end }}

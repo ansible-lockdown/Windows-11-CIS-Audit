@@ -12,6 +12,9 @@ registry:
       workstation: 1
       CIS_ID:
         - 9.2.1
+      NIST800-53R5:
+        - SC-7
+        - SC-7(5)
 file:
   win11cis_9_2_1_effective:
     title: "9.2.1 | Ensure 'Windows Firewall: Private: Firewall state' is set to 'On (recommended)' | effective"
@@ -23,5 +26,8 @@ file:
       workstation: 1
       CIS_ID:
         - 9.2.1
+      NIST800-53R5:
+        - SC-7
+        - SC-7(5)
   {{ end }}
 {{ end }}

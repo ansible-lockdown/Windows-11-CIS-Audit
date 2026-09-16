@@ -12,6 +12,9 @@ registry:
       workstation: 1
       CIS_ID:
         - 9.3.2
+      NIST800-53R5:
+        - SC-7
+        - SC-7(5)
 file:
   win11cis_9_3_2_effective:
     title: "9.3.2 | Ensure 'Windows Firewall: Public: Inbound connections' is set to 'Block (default)' | effective"
@@ -23,5 +26,8 @@ file:
       workstation: 1
       CIS_ID:
         - 9.3.2
+      NIST800-53R5:
+        - SC-7
+        - SC-7(5)
   {{ end }}
 {{ end }}

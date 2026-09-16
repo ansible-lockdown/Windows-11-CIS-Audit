@@ -1,5 +1,10 @@
 # Changes to Windows11-CIS-Audit
 
+## September 2026 - NIST mappings
+
+- NIST800-53R5 meta added to 358 controls
+- controls with no NIST tag in the role carry no NIST field
+
 ## September 2026 - 2.3.11.6
 
 - 2.3.11.6 asserts ForceLogoffWhenHourExpire, not LanManServer EnableForcedLogOff
