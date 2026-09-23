@@ -12,5 +12,7 @@ registry:
       workstation: 1
       CIS_ID:
         - 18.10.8.2
+      NIST800-53R5:
+        - MP-7
   {{ end }}
 {{ end }}

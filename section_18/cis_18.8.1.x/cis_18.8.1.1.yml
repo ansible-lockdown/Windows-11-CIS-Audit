@@ -12,5 +12,7 @@ registry:
       workstation: 2
       CIS_ID:
         - 18.8.1.1
+      NIST800-53R5:
+        - SI-4
   {{ end }}
 {{ end }}

@@ -19,5 +19,7 @@ command:
       workstation: 1
       CIS_ID:
         - 1.1.2
+      NIST800-53R5:
+        - IA-5(1)
   {{ end }}
 {{ end }}

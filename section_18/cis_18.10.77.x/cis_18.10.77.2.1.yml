@@ -12,6 +12,8 @@ registry:
       workstation: 1
       CIS_ID:
         - 18.10.77.2.1
+      NIST800-53R5:
+        - SI-16
   HKLM\SOFTWARE\Policies\Microsoft\Windows\System\ShellSmartScreenLevel:
     title: "18.10.77.2.1 | Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass' | ShellSmartScreenLevel"
     exists: true
@@ -21,5 +23,7 @@ registry:
       workstation: 1
       CIS_ID:
         - 18.10.77.2.1
+      NIST800-53R5:
+        - SI-16
   {{ end }}
 {{ end }}

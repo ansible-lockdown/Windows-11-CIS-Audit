@@ -12,5 +12,7 @@ registry:
       workstation: 1
       CIS_ID:
         - 18.10.26.4.2
+      NIST800-53R5:
+        - AU-4
   {{ end }}
 {{ end }}

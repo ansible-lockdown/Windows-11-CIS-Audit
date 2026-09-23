@@ -12,5 +12,7 @@ registry:
       workstation: 1
       CIS_ID:
         - 18.5.3
+      NIST800-53R5:
+        - SC-7(12)
   {{ end }}
 {{ end }}

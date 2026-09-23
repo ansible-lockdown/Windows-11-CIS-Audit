@@ -13,5 +13,8 @@ file:
       workstation: 2
       CIS_ID:
         - 19.7.8.4
+      NIST800-53R5:
+        - CM-6
+        - CM-7
   {{ end }}
 {{ end }}

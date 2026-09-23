@@ -13,5 +13,7 @@ registry:
       bitlocker: 1
       CIS_ID:
         - 18.9.24.1
+      NIST800-53R5:
+        - CM-8
   {{ end }}
 {{ end }}

@@ -12,5 +12,7 @@ registry:
       workstation: 1
       CIS_ID:
         - 2.3.17.2
+      NIST800-53R5:
+        - AC-6(1)
   {{ end }}
 {{ end }}

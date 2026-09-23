@@ -12,6 +12,9 @@ registry:
       workstation: 2
       CIS_ID:
         - 18.9.20.1.14
+      NIST800-53R5:
+        - CM-6
+        - CM-7
   HKLM\SOFTWARE\Policies\Microsoft\PCHealth\ErrorReporting\DoReport:
     title: "18.9.20.1.14 | Ensure 'Turn off Windows Error Reporting' is set to 'Enabled' | DoReport"
     exists: true
@@ -21,5 +24,8 @@ registry:
       workstation: 2
       CIS_ID:
         - 18.9.20.1.14
+      NIST800-53R5:
+        - CM-6
+        - CM-7
   {{ end }}
 {{ end }}

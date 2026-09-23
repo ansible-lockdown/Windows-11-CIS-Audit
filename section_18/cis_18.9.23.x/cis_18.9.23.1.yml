@@ -12,6 +12,8 @@ registry:
       workstation: 2
       CIS_ID:
         - 18.9.23.1
+      NIST800-53R5:
+        - IA-3(1)
   HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters\DevicePKInitEnabled:
     title: "18.9.23.1 | Ensure 'Support device authentication using certificate' is set to 'Enabled: Automatic' | DevicePKInitEnabled"
     exists: true
@@ -21,5 +23,7 @@ registry:
       workstation: 2
       CIS_ID:
         - 18.9.23.1
+      NIST800-53R5:
+        - IA-3(1)
   {{ end }}
 {{ end }}
