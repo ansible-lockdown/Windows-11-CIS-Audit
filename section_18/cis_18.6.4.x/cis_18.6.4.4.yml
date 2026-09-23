@@ -2,7 +2,6 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_6_4_4 }}
-    {{ if .Vars.win11cis_domain_joined }}
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient\EnableMulticast:
     title: "18.6.4.4 | Ensure 'Turn off multicast name resolution' is set to 'Enabled' | EnableMulticast"
@@ -16,6 +15,5 @@ registry:
       NIST800-53R5:
         - CM-6
         - CM-7
-    {{ end }}
   {{ end }}
 {{ end }}

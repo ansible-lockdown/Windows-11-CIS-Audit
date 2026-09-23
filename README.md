@@ -114,8 +114,8 @@ should hold a configurable user right - sit at the end of the file.
 
 Two of them mirror gates in the remediation role and must match how it was run:
 
-- `win11cis_domain_joined` - several controls apply only to domain members, and
-  four BitLocker controls only to standalone machines. `run_audit.ps1` sets it
+- `win11cis_domain_joined` - LAPS (18.9.26.x) applies only to domain members, as
+  Windows LAPS does not support standalone computers. `run_audit.ps1` sets it
   from `Win32_ComputerSystem.PartOfDomain`, so it follows the host rather than
   this file. When it is true, the controls the domain owns - section 1 account
   policy and 2.3.11.5 - are reported as skipped, with the reason in

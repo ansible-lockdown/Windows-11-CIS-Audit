@@ -2,7 +2,6 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_4_7 }}
-    {{ if .Vars.win11cis_domain_joined }}
 registry:
   HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\Wdigest\UseLogonCredential:
     title: "18.4.7 | Ensure 'WDigest Authentication' is set to 'Disabled' | UseLogonCredential"
@@ -17,6 +16,5 @@ registry:
         - IA-5(1)
         - SC-28
         - SC-28(1)
-    {{ end }}
   {{ end }}
 {{ end }}
