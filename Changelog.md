@@ -1,5 +1,10 @@
 # Changes to Windows11-CIS-Audit
 
+## September 2026 - standalone and domain joined hosts
+
+- 30 controls no longer gated on win11cis_domain_joined; only LAPS remains domain gated
+- README: stale BitLocker standalone note removed
+
 ## September 2026 - NIST mappings
 
 - NIST800-53R5 meta added to 358 controls
