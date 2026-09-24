@@ -112,10 +112,14 @@ Section toggles, the three profile toggles (`win11cis_level_1`,
 values - password lengths, log file sizes, the logon banner, which principals
 should hold a configurable user right - sit at the end of the file.
 
-Two of them mirror gates in the remediation role and must match how it was run:
+Three of them mirror gates in the remediation role and must match how it was run.
+Run from the role, all three are filled in for you:
 
-- `win11cis_domain_joined` - several controls apply only to domain members, and
-  four BitLocker controls only to standalone machines. `run_audit.ps1` sets it
+- `win11cis_bitlocker` - the optional BitLocker (BL) profile, default false. The
+  role applies the BL controls only when it is true, and the audit asserts them
+  only when it is true.
+- `win11cis_domain_joined` - LAPS (18.9.25.x) applies only to domain members, as
+  Windows LAPS does not support standalone computers. `run_audit.ps1` sets it
   from `Win32_ComputerSystem.PartOfDomain`, so it follows the host rather than
   this file. When it is true, the controls the domain owns - section 1 account
   policy and 2.3.11.6 - are reported as skipped, with the reason in

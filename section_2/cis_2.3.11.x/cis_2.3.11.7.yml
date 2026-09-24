@@ -14,8 +14,6 @@ registry:
         - 2.3.11.7
       NIST800-53R5:
         - AC-17(2)
-        - AC-IA-5
-        - AC-IA-5(1)
         - IA-5
         - IA-5(1)
         - SC-8

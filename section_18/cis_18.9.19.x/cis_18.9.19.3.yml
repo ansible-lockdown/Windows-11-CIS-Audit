@@ -2,7 +2,6 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_9_19_3 }}
-    {{ if .Vars.win11cis_domain_joined }}
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378Eac-683F-11D2-A89A-00C04Fbbcfa2}\NoGPOListChanges:
     title: "18.9.19.3 | Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE' | NoGPOListChanges"
@@ -24,6 +23,5 @@ registry:
         - SA-10
         - SA-3
         - SA-8
-    {{ end }}
   {{ end }}
 {{ end }}

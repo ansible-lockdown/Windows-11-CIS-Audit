@@ -2,7 +2,6 @@
 
 {{ if .Vars.win11cis_bitlocker }}
   {{ if .Vars.win11cis_rule_18_10_9_2_16 }}
-    {{ if not .Vars.win11cis_domain_joined }}
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\FVE\UseTPMPIN:
     title: "18.10.9.2.16 | (BL) Ensure 'Require additional authentication at startup: Configure TPM startup PIN:' is set to 'Enabled: Require startup PIN with TPM' | UseTPMPIN"
@@ -14,6 +13,5 @@ registry:
       bitlocker: 1
       CIS_ID:
         - 18.10.9.2.16
-    {{ end }}
   {{ end }}
 {{ end }}

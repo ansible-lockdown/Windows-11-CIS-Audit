@@ -5133,7 +5133,7 @@
     "emitted": true,
     "gate": "win11cis_bitlocker",
     "file": "section_18/cis_18.10.9.x/cis_18.10.9.3.14.yml",
-    "assertions": 1,
+    "assertions": 2,
     "resources": [
       "registry"
     ],
