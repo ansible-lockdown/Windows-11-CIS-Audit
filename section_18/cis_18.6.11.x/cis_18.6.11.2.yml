@@ -21,6 +21,5 @@ registry:
         - CM-7
         - CM-7(1)
         - CM-9
-        - CM(9)
   {{ end }}
 {{ end }}

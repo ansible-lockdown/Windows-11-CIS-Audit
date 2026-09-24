@@ -17,7 +17,6 @@ registry:
         - AC-17(2)
         - IA-5
         - IA-5(1)
-        - IA(5)
         - SC-8
         - SC-9(1)
     {{ end }}
