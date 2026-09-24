@@ -5263,7 +5263,7 @@
     "emitted": true,
     "gate": "win11cis_bitlocker",
     "file": "section_18/cis_18.10.10.x/cis_18.10.10.3.14.yml",
-    "assertions": 1,
+    "assertions": 2,
     "resources": [
       "registry"
     ],

@@ -5,6 +5,14 @@
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\FVE\RDVDenyWriteAccess:
     title: "18.10.10.3.14 | Ensure 'Deny write access to removable drives not protected by BitLocker' is set to 'Enabled' | RDVDenyWriteAccess"
+    exists: false
+    meta:
+      workstation: 1
+      bitlocker: 1
+      CIS_ID:
+        - 18.10.10.3.14
+  HKLM\SYSTEM\CurrentControlSet\Policies\Microsoft\FVE\RDVDenyWriteAccess:
+    title: "18.10.10.3.14 | Ensure 'Deny write access to removable drives not protected by BitLocker' is set to 'Enabled' | RDVDenyWriteAccess"
     exists: true
     value: 1
     type: REG_DWORD

@@ -1,5 +1,11 @@
 # Changes to Windows11-CIS-Audit
 
+## September 2026 - BitLocker profile and RDVDenyWriteAccess
+
+- 18.10.10.3.14 asserts RDVDenyWriteAccess under SYSTEM\CurrentControlSet\Policies\Microsoft\FVE
+- 18.10.10.3.14 asserts the stray SOFTWARE\Policies\Microsoft\FVE value is absent
+- README: win11cis_bitlocker documented as a role gate
+
 ## September 2026 - standalone hosts
 
 - 25 controls no longer gated on win11cis_domain_joined; only LAPS remains domain gated
