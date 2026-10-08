@@ -2,7 +2,6 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_9_1_2 }}
-    {{ if .Vars.win11cis_domain_joined }}
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\DefaultInboundAction:
     title: "9.1.2 | Ensure 'Windows Firewall: Domain: Inbound connections' is set to 'Block (default)' | DefaultInboundAction"
@@ -30,6 +29,5 @@ file:
       NIST800-53R5:
         - SC-7
         - SC-7(5)
-    {{ end }}
   {{ end }}
 {{ end }}

@@ -2,7 +2,6 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_9_1_4 }}
-    {{ if .Vars.win11cis_domain_joined }}
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging\LogFilePath:
     title: "9.1.4 | Ensure 'Windows Firewall: Domain: Logging: Name' is set to '%SystemRoot%\\System32\\logfiles\\firewall\\domainfw.log' | LogFilePath"
@@ -16,6 +15,5 @@ registry:
       NIST800-53R5:
         - SC-7
         - SC-7(5)
-    {{ end }}
   {{ end }}
 {{ end }}

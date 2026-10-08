@@ -2,7 +2,6 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_2_3_6_4 }}
-    {{ if .Vars.win11cis_domain_joined }}
 registry:
   HKLM\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters\DisablePasswordChange:
     title: "2.3.6.4 | Ensure 'Domain member: Disable machine account password changes' is set to 'Disabled' | DisablePasswordChange"
@@ -15,6 +14,5 @@ registry:
         - 2.3.6.4
       NIST800-53R5:
         - AC-2(1)
-    {{ end }}
   {{ end }}
 {{ end }}

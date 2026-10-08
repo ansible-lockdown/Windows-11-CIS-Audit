@@ -1,5 +1,17 @@
 # Changes to Windows11-CIS-Audit
 
+## September 2026 - BitLocker profile, RDVDenyWriteAccess and NIST meta
+
+- 18.10.9.3.14 asserts RDVDenyWriteAccess under SYSTEM\CurrentControlSet\Policies\Microsoft\FVE
+- 18.10.9.3.14 asserts the stray SOFTWARE\Policies\Microsoft\FVE value is absent
+- malformed NIST800-53R5 meta removed from 10 controls
+- README: win11cis_bitlocker documented as a role gate
+
+## September 2026 - standalone and domain joined hosts
+
+- 30 controls no longer gated on win11cis_domain_joined; only LAPS remains domain gated
+- README: stale BitLocker standalone note removed
+
 ## September 2026 - NIST mappings
 
 - NIST800-53R5 meta added to 358 controls
