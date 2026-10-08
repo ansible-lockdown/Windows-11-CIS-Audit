@@ -1,5 +1,13 @@
 # Changes to Windows11-CIS-Audit
 
+## October 2026 - registry locations
+
+- 18.9.26.2 asserts LAPS PasswordExpirationProtectionEnabled
+- 18.9.27.2 asserts RunAsPPL under SOFTWARE\Policies\Microsoft\Windows\System
+- 18.4.4 asserts the Wow6432Node EnableCertPaddingCheck value
+- run_audit.ps1 falls back to the registry when CIM lookups fail after an admin rename
+- run_audit.ps1 warns when the firewall profiles cannot be read
+
 ## September 2026 - BitLocker profile and RDVDenyWriteAccess
 
 - 18.10.10.3.14 asserts RDVDenyWriteAccess under SYSTEM\CurrentControlSet\Policies\Microsoft\FVE

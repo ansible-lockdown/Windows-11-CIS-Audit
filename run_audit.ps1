@@ -246,6 +246,9 @@ function New-PolicySnapshot {
     foreach ($fw in Get-NetFirewallProfile -PolicyStore ActiveStore -ErrorAction SilentlyContinue) {
         $profiles[$fw.Name] = $fw
     }
+    if ($profiles.Count -eq 0) {
+        Write-Warning 'Get-NetFirewallProfile returned nothing - section 9 reads ABSENT. This happens in a session whose account was renamed mid-run (2.3.1.3); rerun the audit from a new connection.'
+    }
     foreach ($target in $targets.firewall) {
         $value = 'ABSENT'
         if ($profiles.ContainsKey($target.profile)) {
@@ -404,12 +407,27 @@ if ($CollectOnly) {
 # Audit
 # --------------------------------------------------------------------------
 
-$hostMachineUuid = (Get-CimInstance -ClassName Win32_ComputerSystemProduct).UUID
+# CIM lookups can fail in a session whose account was renamed mid-run (2.3.1.3):
+# "No mapping between account names and security IDs". The UUID and OS fields are
+# report metadata, so fall back to the registry rather than abort the audit.
+$currentVersion  = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion'
+$hostMachineUuid = (Get-CimInstance -ClassName Win32_ComputerSystemProduct -ErrorAction SilentlyContinue).UUID
+if (-not $hostMachineUuid) {
+    $hostMachineUuid = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Cryptography' -ErrorAction SilentlyContinue).MachineGuid
+}
 $hostEpoch       = [string][int][double]::Parse((Get-Date -UFormat %s))
 $hostOsLocale    = (Get-TimeZone).Id
-$osInfo          = Get-CimInstance -ClassName Win32_OperatingSystem
-$currentVersion  = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion'
+$osInfo          = Get-CimInstance -ClassName Win32_OperatingSystem -ErrorAction SilentlyContinue
+$osVersion       = if ($osInfo) { $osInfo.Version } else {
+    "$($currentVersion.CurrentMajorVersionNumber).$($currentVersion.CurrentMinorVersionNumber).$($currentVersion.CurrentBuildNumber)"
+}
+$osCaption       = if ($osInfo) { $osInfo.Caption } else { $currentVersion.ProductName }
 $hostOsHostname  = $env:COMPUTERNAME
+$computerSystem  = Get-CimInstance -ClassName Win32_ComputerSystem -ErrorAction SilentlyContinue
+$domainJoined    = if ($computerSystem) { [bool]$computerSystem.PartOfDomain } else {
+    Write-Warning 'Win32_ComputerSystem unavailable - domain membership read from the Tcpip Domain value'
+    [bool](Get-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters' -ErrorAction SilentlyContinue).Domain
+}
 
 if (-not $OutFile) {
     $OutFile = Join-Path $AuditContentLocation "audit_$hostOsHostname-$Benchmark-${BenchmarkOs}_$hostEpoch.$Format"
@@ -423,8 +441,8 @@ $auditJsonVars = @{
     epoch             = $hostEpoch
     os_locale         = $hostOsLocale
     os_release        = $currentVersion.DisplayVersion
-    os_build          = "$($osInfo.Version).$($currentVersion.UBR)"
-    os_distribution   = $osInfo.Caption
+    os_build          = "$osVersion.$($currentVersion.UBR)"
+    os_distribution   = $osCaption
     os_hostname       = $hostOsHostname
     auto_group        = $Group
     system_type       = $SystemType
@@ -435,7 +453,7 @@ $auditJsonVars = @{
     # Detected rather than assumed. Several controls apply only to domain
     # members and four BitLocker ones only to standalone machines; guessing
     # wrong turns skipped controls into failures or vice versa.
-    win11cis_domain_joined   = [bool](Get-CimInstance Win32_ComputerSystem).PartOfDomain
+    win11cis_domain_joined   = $domainJoined
 } | ConvertTo-Json -Compress
 
 $formatArgs = if ($Format -eq 'json') { @('-f', 'json', '-o', 'pretty') } else { @('-f', $Format) }
