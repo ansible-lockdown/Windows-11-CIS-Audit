@@ -7,6 +7,8 @@
 - 18.4.4 asserts the Wow6432Node EnableCertPaddingCheck value
 - run_audit.ps1 falls back to the registry when CIM lookups fail after an admin rename
 - run_audit.ps1 warns when the firewall profiles cannot be read
+- 18.10.3.1 asserts DisableAPISamping under AppCompat
+- 18.10.94.4.1 asserts SetAllowOptionalContent
 
 ## September 2026 - BitLocker profile and RDVDenyWriteAccess
 
