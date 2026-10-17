@@ -1,6 +1,6 @@
 {
   "README.md": "b1a9d1968b4b5076e2e884ca858606687616627427e1ab2c48b7c92903e9cee3",
-  "collector_targets.json": "c0e76aa1a004edc3b9bd9efede944fb31a33586003437d7078908f8d3dbe59ed",
+  "collector_targets.json": "62efc91adb41549c665efea8809aaa7fcc583d182c71c75e82e9c709596b9ddf",
   "coverage.json": "40da5f47d8b45f6fd4d6fcdd12e267ec3ec73af5db9eeec46c7b713bf48e2a15",
   "goss.yml": "6fa05b7cdd95cfdf60d2a44683fc02ef0ec06215d44f75262fa1f0cccae02697",
   "section_1/cis_1.1.x/cis_1.1.1.yml": "82ed4979d6cf4e5a27e407b2301db18a022fe18cf4f7a2dc8fb7517e50987298",
@@ -18,7 +18,7 @@
   "section_17/cis_17.2.x/cis_17.2.1.yml": "6acb648eec2dae89543dcdfc9eeeef1f7f46af544337df2d043849415343b7da",
   "section_17/cis_17.2.x/cis_17.2.2.yml": "c5f9e5d1b343c7bfb6b1d1c4762cd3e6fed1454239be38dde5c9508e1c69a309",
   "section_17/cis_17.2.x/cis_17.2.3.yml": "86b5071a11cf6cadf99e771986eb81f529d3367cac24472efe852cdea4543a5d",
-  "section_17/cis_17.3.x/cis_17.3.1.yml": "304631c7fb26d4603e6bb4f85756f4f59522b27c242ed7f3bac162aff9767e2a",
+  "section_17/cis_17.3.x/cis_17.3.1.yml": "881c53c4e111f76c469bdd9b438fa596c18ad476839445f659242920aa2419db",
   "section_17/cis_17.3.x/cis_17.3.2.yml": "52721e3ef2f1626156126b9e98207f33c81f41405f32342389d7f39f58a67d83",
   "section_17/cis_17.5.x/cis_17.5.1.yml": "0094762855aa88fb1ed0750ed089ea6722f9d0ec3605a2d2528e0affa00cde67",
   "section_17/cis_17.5.x/cis_17.5.2.yml": "a9d4307f307a6b878e71e65f91a7ccd0c46a9f9e7b6d828f142851e29d13ed91",

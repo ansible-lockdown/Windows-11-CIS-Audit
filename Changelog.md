@@ -1,5 +1,11 @@
 # Changes to Windows11-CIS-Audit
 
+## October 2026 - audit policy by GUID
+
+- run_audit.ps1 reads audit policy by subcategory GUID from auditpol /backup, any display language (addresses https://github.com/ansible-lockdown/Windows-11-CIS/issues/45) - Thank you @exu-g
+- collector_targets.json carries the subcategory GUID
+- 17.3.1 title suffix is the benchmark name PNP Activity
+
 ## October 2026 - registry locations
 
 - 18.9.26.2 asserts LAPS PasswordExpirationProtectionEnabled

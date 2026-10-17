@@ -182,41 +182,28 @@ function New-PolicySnapshot {
         }
     }
 
-    # ---- auditpol: one call covering every subcategory ----
-    # /r gives: Machine Name,Policy Target,Subcategory,Subcategory GUID,
-    #           Inclusion Setting,Exclusion Setting
-    # The inclusion setting is text, not a number, and both it and the
-    # subcategory name are localised. The collector turns the text into the
-    # numeric CIS talks in, so the 27 spec files stay locale-independent, and
-    # records the GUID beside it so a localised host can be pinned by GUID later.
-    # An unrecognised setting is recorded verbatim, which fails loudly rather
-    # than passing on an unread value.
-    $inclusionToValue = @{
-        'No Auditing'         = 0
-        'Success'             = 1
-        'Failure'             = 2
-        'Success and Failure' = 3
-    }
-    $auditByName = @{}
-    $guidByName = @{}
-    foreach ($row in @(& auditpol /get /category:* /r 2>$null)) {
-        if ([string]::IsNullOrWhiteSpace($row)) { continue }
-        $fields = $row.Split(',')
-        if ($fields.Count -lt 5) { continue }
-        $name = $fields[2].Trim()
-        if ($name -eq 'Subcategory') { continue }
-        $inclusion = $fields[4].Trim()
-        $guidByName[$name] = $fields[3].Trim()
-        if ($inclusionToValue.ContainsKey($inclusion)) {
-            $auditByName[$name] = $inclusionToValue[$inclusion]
-        } else {
-            $auditByName[$name] = "UNKNOWN=$inclusion"
+    # ---- auditpol: one backup covering every subcategory ----
+    # The backup CSV ends each row with the numeric Setting Value CIS talks in
+    # (0 none, 1 success, 2 failure, 3 both) and carries the subcategory GUID.
+    # Subcategory names, headers and the inclusion text are all localised, so
+    # each row is read by GUID and trailing number, never by name or column
+    # header, and the collector works on any display language (issue 45).
+    $auditByGuid = @{}
+    $backup = Join-Path $env:TEMP 'lockdown_audit_auditpol.csv'
+    & auditpol /backup /file:"$backup" | Out-Null
+    if (Test-Path -LiteralPath $backup) {
+        foreach ($row in Get-Content -LiteralPath $backup) {
+            if ($row -match '(\{[0-9A-Fa-f-]{36}\}).*,(\d+)\s*$') {
+                $auditByGuid[$Matches[1].ToUpper()] = [int]$Matches[2]
+            }
         }
+        Remove-Item -LiteralPath $backup -Force -ErrorAction SilentlyContinue
     }
     foreach ($target in $targets.auditpol) {
-        if ($auditByName.ContainsKey($target.subcategory)) {
-            $lines.Add("AuditPolicy.$($target.rule)=$($auditByName[$target.subcategory])")
-            $lines.Add("AuditPolicyGuid.$($target.rule)=$($guidByName[$target.subcategory])")
+        $guid = "$($target.guid)".ToUpper()
+        if ($guid -and $auditByGuid.ContainsKey($guid)) {
+            $lines.Add("AuditPolicy.$($target.rule)=$($auditByGuid[$guid])")
+            $lines.Add("AuditPolicyGuid.$($target.rule)=$guid")
         } else {
             $lines.Add("AuditPolicy.$($target.rule)=ABSENT")
         }
