@@ -5,6 +5,13 @@
 registry:
   HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AllowOptionalContent:
     title: "18.10.92.4.4 | Ensure 'Enable optional updates' is set to 'Disabled' | AllowOptionalContent"
+    exists: false
+    meta:
+      workstation: 1
+      CIS_ID:
+        - 18.10.92.4.4
+  HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\SetAllowOptionalContent:
+    title: "18.10.92.4.4 | Ensure 'Enable optional updates' is set to 'Disabled' | SetAllowOptionalContent"
     exists: true
     value: 0
     type: REG_DWORD
