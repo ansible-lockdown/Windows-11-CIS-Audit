@@ -2,6 +2,8 @@
 
 ## September 2026 - BitLocker profile, RDVDenyWriteAccess and NIST meta
 
+- 18.10.92.4.4 asserts SetAllowOptionalContent
+- 18.10.92.4.4 asserts the stray AllowOptionalContent value is absent
 - 18.10.9.3.14 asserts RDVDenyWriteAccess under SYSTEM\CurrentControlSet\Policies\Microsoft\FVE
 - 18.10.9.3.14 asserts the stray SOFTWARE\Policies\Microsoft\FVE value is absent
 - malformed NIST800-53R5 meta removed from 10 controls
