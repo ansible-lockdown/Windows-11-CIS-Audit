@@ -37,8 +37,8 @@ The content is Goss format, the same as every other Ansible-Lockdown audit
 repository. It is run with [syver](https://github.com/krameff/syver), the Goss
 fork that adds Windows support.
 
-The fork matters here rather than being a preference. Of the 540 specs, **403
-assert through the `registry:` resource**, 137 through `file:` and 6 through
+The fork matters here rather than being a preference. Of the 535 specs, **402
+assert through the `registry:` resource**, 134 through `file:` and 6 through
 `command:`. `registry:` is provided by syver, so upstream Goss can run the
 `file:` and `command:` subset but not the three quarters of this benchmark that
 reads the registry. Anything that implements the same resources will run the
@@ -124,8 +124,9 @@ Run from the role, all three are filled in for you:
   this file. When it is true, the controls the domain owns - section 1 account
   policy and 2.3.11.5 - are reported as skipped, with the reason in
   `meta.skip_reason`, rather than failed or left out.
-- `win11cis_win_skip_for_test` - the role's own switch for the 13 controls that
-  would sever a test host (RDP, WinRM, sshd, the public firewall). If the role
+- `win11cis_win_skip_for_test` - the role's own switch for the 18 controls that
+  would sever a test host (account lockout, RDP, WinRM, sshd, the public
+  firewall, UAC remote restrictions on local accounts). If the role
   was run with it set, set it here too, or those controls will fail correctly
   and unhelpfully.
 
@@ -157,8 +158,8 @@ meaningful section 19 result, not a defect.
 
 ### Controls that branch on state discovered at run time
 
-These pick *which* value is correct from something a gossfile
-template cannot see - whether Hyper-V or IIS is installed, whether
+These pick *which* value is correct from something a spec file
+cannot see - whether Hyper-V or IIS is installed, whether
 an account has been renamed, what a site variable was set to. Each
 asserts the part that holds on every host; the feature-dependent
 part is matched optionally rather than required.

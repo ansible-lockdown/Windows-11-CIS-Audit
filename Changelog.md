@@ -1,5 +1,17 @@
 # Changes to Windows11-CIS-Audit
 
+## CIS Benchmark v5.1.0
+## November 2026 - QA fixes
+
+- 18.4.6 gated on win11cis_netbt_nodetype being P-node, as the role
+- 18.10.94.4.1 asserts the stray AllowOptionalContent value is absent
+- 18.9.5.7, 18.9.29.3, 18.9.35.6.1 and 18.9.35.6.2 titles: PDF line-wrap hyphen spacing removed
+- .gitignore secret and QA artifact patterns, .github/ no longer ignored
+- README resource counts updated
+- 18.10.3.1 also asserts DisableAPISampling
+- 18.4.1 gated on win11cis_win_skip_for_test, as the role
+- section 5 specs in one section_5/cis_5.x folder, as the role
+
 ## October 2026 - audit policy by GUID
 
 - run_audit.ps1 reads audit policy by subcategory GUID from auditpol /backup, any display language (addresses https://github.com/ansible-lockdown/Windows-11-CIS/issues/45) - Thank you @exu-g

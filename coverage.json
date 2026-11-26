@@ -1447,7 +1447,7 @@
     "title": "Ensure 'Bluetooth Audio Gateway Service (BTAGService)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.1.x/cis_5.1.yml",
+    "file": "section_5/cis_5.x/cis_5.1.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1460,7 +1460,7 @@
     "title": "Ensure 'Bluetooth Support Service (bthserv)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.1.x/cis_5.2.yml",
+    "file": "section_5/cis_5.x/cis_5.2.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1473,7 +1473,7 @@
     "title": "Ensure 'Computer Browser (Browser)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.1.x/cis_5.3.yml",
+    "file": "section_5/cis_5.x/cis_5.3.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1486,7 +1486,7 @@
     "title": "Ensure 'Downloaded Maps Manager (MapsBroker)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.1.x/cis_5.4.yml",
+    "file": "section_5/cis_5.x/cis_5.4.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1499,7 +1499,7 @@
     "title": "Ensure 'GameInput Service (GameInputSvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.1.x/cis_5.5.yml",
+    "file": "section_5/cis_5.x/cis_5.5.yml",
     "assertions": 1,
     "resources": [
       "registry"
@@ -1512,7 +1512,7 @@
     "title": "Ensure 'Geolocation Service (lfsvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.1.x/cis_5.6.yml",
+    "file": "section_5/cis_5.x/cis_5.6.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1525,7 +1525,7 @@
     "title": "Ensure 'IIS Admin Service (IISADMIN)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.1.x/cis_5.7.yml",
+    "file": "section_5/cis_5.x/cis_5.7.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1538,7 +1538,7 @@
     "title": "Ensure 'Infrared monitor service (irmon)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.1.x/cis_5.8.yml",
+    "file": "section_5/cis_5.x/cis_5.8.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1551,7 +1551,7 @@
     "title": "Ensure 'Link-Layer Topology Discovery Mapper (lltdsvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.1.x/cis_5.9.yml",
+    "file": "section_5/cis_5.x/cis_5.9.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1564,7 +1564,7 @@
     "title": "Ensure 'Microsoft FTP Service (FTPSVC)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.1.x/cis_5.10.yml",
+    "file": "section_5/cis_5.x/cis_5.10.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1577,7 +1577,7 @@
     "title": "Ensure 'Microsoft iSCSI Initiator Service (MSiSCSI)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.1.x/cis_5.11.yml",
+    "file": "section_5/cis_5.x/cis_5.11.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1590,7 +1590,7 @@
     "title": "Ensure 'OpenSSH SSH Server (sshd)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.12.x/cis_5.12.yml",
+    "file": "section_5/cis_5.x/cis_5.12.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1603,7 +1603,7 @@
     "title": "Ensure 'Peer Name Resolution Protocol (PNRPsvc)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.13.yml",
+    "file": "section_5/cis_5.x/cis_5.13.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1616,7 +1616,7 @@
     "title": "Ensure 'Peer Networking Grouping (p2psvc)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.14.yml",
+    "file": "section_5/cis_5.x/cis_5.14.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1629,7 +1629,7 @@
     "title": "Ensure 'Peer Networking Identity Manager (p2pimsvc)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.15.yml",
+    "file": "section_5/cis_5.x/cis_5.15.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1642,7 +1642,7 @@
     "title": "Ensure 'PNRP Machine Name Publication Service (PNRPAutoReg)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.16.yml",
+    "file": "section_5/cis_5.x/cis_5.16.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1655,7 +1655,7 @@
     "title": "Ensure 'Print Spooler (Spooler)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.17.yml",
+    "file": "section_5/cis_5.x/cis_5.17.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1668,7 +1668,7 @@
     "title": "Ensure 'Problem Reports and Solutions Control Panel Support (wercplsupport)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.18.yml",
+    "file": "section_5/cis_5.x/cis_5.18.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1681,7 +1681,7 @@
     "title": "Ensure 'Remote Access Auto Connection Manager (RasAuto)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.19.yml",
+    "file": "section_5/cis_5.x/cis_5.19.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1694,7 +1694,7 @@
     "title": "Ensure 'Remote Desktop Configuration (SessionEnv)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.20.yml",
+    "file": "section_5/cis_5.x/cis_5.20.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1707,7 +1707,7 @@
     "title": "Ensure 'Remote Desktop Services (TermService)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.21.yml",
+    "file": "section_5/cis_5.x/cis_5.21.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1720,7 +1720,7 @@
     "title": "Ensure 'Remote Desktop Services UserMode Port Redirector (UmRdpService)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.12.x/cis_5.22.yml",
+    "file": "section_5/cis_5.x/cis_5.22.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1733,7 +1733,7 @@
     "title": "Ensure 'Remote Procedure Call (RPC) Locator (RpcLocator)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.23.x/cis_5.23.yml",
+    "file": "section_5/cis_5.x/cis_5.23.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1746,7 +1746,7 @@
     "title": "Ensure 'Remote Registry (RemoteRegistry)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.23.x/cis_5.24.yml",
+    "file": "section_5/cis_5.x/cis_5.24.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1759,7 +1759,7 @@
     "title": "Ensure 'Routing and Remote Access (RemoteAccess)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.23.x/cis_5.25.yml",
+    "file": "section_5/cis_5.x/cis_5.25.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1772,7 +1772,7 @@
     "title": "Ensure 'Server (LanmanServer)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.23.x/cis_5.26.yml",
+    "file": "section_5/cis_5.x/cis_5.26.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1785,7 +1785,7 @@
     "title": "Ensure 'Simple TCP/IP Services (simptcp)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.23.x/cis_5.27.yml",
+    "file": "section_5/cis_5.x/cis_5.27.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1798,7 +1798,7 @@
     "title": "Ensure 'SNMP Service (SNMP)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.23.x/cis_5.28.yml",
+    "file": "section_5/cis_5.x/cis_5.28.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1811,7 +1811,7 @@
     "title": "Ensure 'Special Administration Console Helper (sacsvr)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.23.x/cis_5.29.yml",
+    "file": "section_5/cis_5.x/cis_5.29.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1824,7 +1824,7 @@
     "title": "Ensure 'SSDP Discovery (SSDPSRV)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.23.x/cis_5.30.yml",
+    "file": "section_5/cis_5.x/cis_5.30.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1837,7 +1837,7 @@
     "title": "Ensure 'UPnP Device Host (upnphost)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.23.x/cis_5.31.yml",
+    "file": "section_5/cis_5.x/cis_5.31.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1850,7 +1850,7 @@
     "title": "Ensure 'Web Management Service (WMSvc)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.23.x/cis_5.32.yml",
+    "file": "section_5/cis_5.x/cis_5.32.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1863,7 +1863,7 @@
     "title": "Ensure 'Windows Error Reporting Service (WerSvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.23.x/cis_5.33.yml",
+    "file": "section_5/cis_5.x/cis_5.33.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1876,7 +1876,7 @@
     "title": "Ensure 'Windows Event Collector (Wecsvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.34.x/cis_5.34.yml",
+    "file": "section_5/cis_5.x/cis_5.34.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1889,7 +1889,7 @@
     "title": "Ensure 'Windows Media Player Network Sharing Service (WMPNetworkSvc)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.34.x/cis_5.35.yml",
+    "file": "section_5/cis_5.x/cis_5.35.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1902,7 +1902,7 @@
     "title": "Ensure 'Windows Mobile Hotspot Service (icssvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.34.x/cis_5.36.yml",
+    "file": "section_5/cis_5.x/cis_5.36.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1915,7 +1915,7 @@
     "title": "Ensure 'Windows Push Notifications System Service (WpnService)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.34.x/cis_5.37.yml",
+    "file": "section_5/cis_5.x/cis_5.37.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1928,7 +1928,7 @@
     "title": "Ensure 'Windows PushToInstall Service (PushToInstall)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.34.x/cis_5.38.yml",
+    "file": "section_5/cis_5.x/cis_5.38.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1941,7 +1941,7 @@
     "title": "Ensure 'Windows Remote Management (WS-Management) (WinRM)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
-    "file": "section_5/cis_5.34.x/cis_5.39.yml",
+    "file": "section_5/cis_5.x/cis_5.39.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1954,7 +1954,7 @@
     "title": "Ensure 'World Wide Web Publishing Service (W3SVC)' is set to 'Disabled' or 'Not Installed'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.34.x/cis_5.40.yml",
+    "file": "section_5/cis_5.x/cis_5.40.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1967,7 +1967,7 @@
     "title": "Ensure 'Xbox Accessory Management Service (XboxGipSvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.34.x/cis_5.41.yml",
+    "file": "section_5/cis_5.x/cis_5.41.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1980,7 +1980,7 @@
     "title": "Ensure 'Xbox Live Auth Manager (XblAuthManager)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.34.x/cis_5.42.yml",
+    "file": "section_5/cis_5.x/cis_5.42.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -1993,7 +1993,7 @@
     "title": "Ensure 'Xbox Live Game Save (XblGameSave)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.34.x/cis_5.43.yml",
+    "file": "section_5/cis_5.x/cis_5.43.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -2006,7 +2006,7 @@
     "title": "Ensure 'Xbox Live Networking Service (XboxNetApiSvc)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
-    "file": "section_5/cis_5.34.x/cis_5.44.yml",
+    "file": "section_5/cis_5.x/cis_5.44.yml",
     "assertions": 1,
     "resources": [
       "file"
@@ -3764,7 +3764,7 @@
   },
   {
     "rule_id": "18.9.5.7",
-    "title": "Ensure 'Turn On Virtualization Based Security: Kernel- mode Hardware-enforced Stack Protection' is set to 'Enabled: Enabled in enforcement mode'",
+    "title": "Ensure 'Turn On Virtualization Based Security: Kernel-mode Hardware-enforced Stack Protection' is set to 'Enabled: Enabled in enforcement mode'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.5.x/cis_18.9.5.7.yml",
@@ -4284,7 +4284,7 @@
   },
   {
     "rule_id": "18.9.29.3",
-    "title": "Ensure 'Do not enumerate connected users on domain- joined computers' is set to 'Enabled'",
+    "title": "Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.29.x/cis_18.9.29.3.yml",
@@ -4388,7 +4388,7 @@
   },
   {
     "rule_id": "18.9.35.6.1",
-    "title": "Ensure 'Allow network connectivity during connected- standby (on battery)' is set to 'Disabled'",
+    "title": "Ensure 'Allow network connectivity during connected-standby (on battery)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.35.x/cis_18.9.35.6.1.yml",
@@ -4401,7 +4401,7 @@
   },
   {
     "rule_id": "18.9.35.6.2",
-    "title": "Ensure 'Allow network connectivity during connected- standby (plugged in)' is set to 'Disabled'",
+    "title": "Ensure 'Allow network connectivity during connected-standby (plugged in)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.35.x/cis_18.9.35.6.2.yml",
@@ -4613,7 +4613,7 @@
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_18/cis_18.10.3.x/cis_18.10.3.1.yml",
-    "assertions": 1,
+    "assertions": 2,
     "resources": [
       "registry"
     ],
@@ -6758,7 +6758,7 @@
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.94.x/cis_18.10.94.4.1.yml",
-    "assertions": 1,
+    "assertions": 2,
     "resources": [
       "registry"
     ],
