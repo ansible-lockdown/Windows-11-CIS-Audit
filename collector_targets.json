@@ -1,110 +1,137 @@
 {
   "auditpol": [
     {
+      "guid": "{0CCE923F-69AE-11D9-BED3-505054503030}",
       "rule": "17.1.1",
       "subcategory": "Credential Validation"
     },
     {
+      "guid": "{0CCE9239-69AE-11D9-BED3-505054503030}",
       "rule": "17.2.1",
       "subcategory": "Application Group Management"
     },
     {
+      "guid": "{0CCE9237-69AE-11D9-BED3-505054503030}",
       "rule": "17.2.2",
       "subcategory": "Security Group Management"
     },
     {
+      "guid": "{0CCE9235-69AE-11D9-BED3-505054503030}",
       "rule": "17.2.3",
       "subcategory": "User Account Management"
     },
     {
+      "guid": "{0CCE9248-69AE-11D9-BED3-505054503030}",
       "rule": "17.3.1",
-      "subcategory": "Plug and Play Events"
+      "subcategory": "PNP Activity"
     },
     {
+      "guid": "{0CCE922B-69AE-11D9-BED3-505054503030}",
       "rule": "17.3.2",
       "subcategory": "Process Creation"
     },
     {
+      "guid": "{0CCE9217-69AE-11D9-BED3-505054503030}",
       "rule": "17.5.1",
       "subcategory": "Account Lockout"
     },
     {
+      "guid": "{0CCE9249-69AE-11D9-BED3-505054503030}",
       "rule": "17.5.2",
       "subcategory": "Group Membership"
     },
     {
+      "guid": "{0CCE9216-69AE-11D9-BED3-505054503030}",
       "rule": "17.5.3",
       "subcategory": "Logoff"
     },
     {
+      "guid": "{0CCE9215-69AE-11D9-BED3-505054503030}",
       "rule": "17.5.4",
       "subcategory": "Logon"
     },
     {
+      "guid": "{0CCE921C-69AE-11D9-BED3-505054503030}",
       "rule": "17.5.5",
       "subcategory": "Other Logon/Logoff Events"
     },
     {
+      "guid": "{0CCE921B-69AE-11D9-BED3-505054503030}",
       "rule": "17.5.6",
       "subcategory": "Special Logon"
     },
     {
+      "guid": "{0CCE9244-69AE-11D9-BED3-505054503030}",
       "rule": "17.6.1",
       "subcategory": "Detailed File Share"
     },
     {
+      "guid": "{0CCE9224-69AE-11D9-BED3-505054503030}",
       "rule": "17.6.2",
       "subcategory": "File Share"
     },
     {
+      "guid": "{0CCE9227-69AE-11D9-BED3-505054503030}",
       "rule": "17.6.3",
       "subcategory": "Other Object Access Events"
     },
     {
+      "guid": "{0CCE9245-69AE-11D9-BED3-505054503030}",
       "rule": "17.6.4",
       "subcategory": "Removable Storage"
     },
     {
+      "guid": "{0CCE922F-69AE-11D9-BED3-505054503030}",
       "rule": "17.7.1",
       "subcategory": "Audit Policy Change"
     },
     {
+      "guid": "{0CCE9230-69AE-11D9-BED3-505054503030}",
       "rule": "17.7.2",
       "subcategory": "Authentication Policy Change"
     },
     {
+      "guid": "{0CCE9231-69AE-11D9-BED3-505054503030}",
       "rule": "17.7.3",
       "subcategory": "Authorization Policy Change"
     },
     {
+      "guid": "{0CCE9232-69AE-11D9-BED3-505054503030}",
       "rule": "17.7.4",
       "subcategory": "MPSSVC Rule-Level Policy Change"
     },
     {
+      "guid": "{0CCE9234-69AE-11D9-BED3-505054503030}",
       "rule": "17.7.5",
       "subcategory": "Other Policy Change Events"
     },
     {
+      "guid": "{0CCE9228-69AE-11D9-BED3-505054503030}",
       "rule": "17.8.1",
       "subcategory": "Sensitive Privilege Use"
     },
     {
+      "guid": "{0CCE9213-69AE-11D9-BED3-505054503030}",
       "rule": "17.9.1",
       "subcategory": "IPsec Driver"
     },
     {
+      "guid": "{0CCE9214-69AE-11D9-BED3-505054503030}",
       "rule": "17.9.2",
       "subcategory": "Other System Events"
     },
     {
+      "guid": "{0CCE9210-69AE-11D9-BED3-505054503030}",
       "rule": "17.9.3",
       "subcategory": "Security State Change"
     },
     {
+      "guid": "{0CCE9211-69AE-11D9-BED3-505054503030}",
       "rule": "17.9.4",
       "subcategory": "Security System Extension"
     },
     {
+      "guid": "{0CCE9212-69AE-11D9-BED3-505054503030}",
       "rule": "17.9.5",
       "subcategory": "System Integrity"
     }

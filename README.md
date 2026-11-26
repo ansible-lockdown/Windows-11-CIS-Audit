@@ -38,7 +38,7 @@ repository. It is run with [syver](https://github.com/krameff/syver), the Goss
 fork that adds Windows support.
 
 The fork matters here rather than being a preference. Of the 540 specs, **403
-assert through the `registry:` resource**, 137 through `file:` and 6 through
+assert through the `registry:` resource**, 138 through `file:` and 6 through
 `command:`. `registry:` is provided by syver, so upstream Goss can run the
 `file:` and `command:` subset but not the three quarters of this benchmark that
 reads the registry. Anything that implements the same resources will run the
@@ -46,16 +46,15 @@ content unchanged - nothing here is syver-specific beyond the resource types.
 
 ## Requirements
 
-- `syver` >= 0.11.0. Published releases are at
-  <https://github.com/krameff/syver/releases>; `v0.11.1` is the version this
+- `syver` >= 0.16.0, enforced by `run_audit.ps1`. Published releases are at
+  <https://github.com/krameff/syver/releases>; `v0.21.0` is the version this
   content is validated against.
 
-  From 0.11.0 syver reports a check it cannot run as an error rather than
-  letting it pass quietly. Below that version a green result is worth slightly
-  less, because an unsupported assertion can look like a pass. `run_audit.ps1`
-  warns rather than refusing to run, and everything this audit uses -
-  `registry:`, `file: contents:`, `command:`, `--vars`, `--use-alpha=1` - works
-  as far back as 0.9.4.
+  Every deliberate skip carries a `skip-reason:` attribute, which older
+  releases reject as unknown, aborting the whole run. syver prints the reason
+  on each skipped result: `(reason)` after `skipped` in the documentation
+  format, a `skip-reason` field on the result in JSON. A check syver cannot run
+  is reported as an error rather than being allowed to pass quietly.
 
   Nothing in this repository downloads the binary. Run standalone, pre-stage it
   and set `AUDIT_BIN` if it is not at `C:\Program Files\syver\syver.exe`. Run
@@ -71,7 +70,7 @@ cost.
 
 ## The policy snapshot
 
-Most of this benchmark is not readable by a goss resource. `run_audit.ps1`
+Most of this benchmark is not readable by a syver resource. `run_audit.ps1`
 therefore collects once, up front - one `secedit /export`, one `auditpol`, one
 `Get-Service`, one `Get-NetFirewallProfile`, one pass over the loaded user hives
 - normalises the result, and writes a snapshot to
@@ -91,14 +90,14 @@ asserted cannot drift apart.
 ```
 
 Each control reads one small file per collected value, under
-`%TEMP%\win11cis_snapshot\`, rather than the combined snapshot. goss prints the
+`%TEMP%\win11cis_snapshot\`, rather than the combined snapshot. syver prints the
 whole file when a `contents:` matcher fails, so a shared snapshot would bury
 every failure under every other value and make the report unreadable.
 
-Two checks in `goss.yml` assert that the snapshot exists and is complete, so a
+Two checks in `syver.yml` assert that the snapshot exists and is complete, so a
 missing or half-written snapshot fails loudly instead of reading as a clean run.
 
-An empty value is recorded as the literal `NONE`, never as nothing. goss splits
+An empty value is recorded as the literal `NONE`, never as nothing. syver splits
 a file into lines and an empty file has none, so a `/^$/` matcher can never
 match: every "No One" user-right control would fail while the host was in fact
 compliant.
@@ -123,7 +122,7 @@ Run from the role, all three are filled in for you:
   from `Win32_ComputerSystem.PartOfDomain`, so it follows the host rather than
   this file. When it is true, the controls the domain owns - section 1 account
   policy and 2.3.11.6 - are reported as skipped, with the reason in
-  `meta.skip_reason`, rather than failed or left out.
+  `skip-reason`, rather than failed or left out.
 - `win11cis_win_skip_for_test` - the role's own switch for the 13 controls that
   would sever a test host (RDP, WinRM, sshd, the public firewall). If the role
   was run with it set, set it here too, or those controls will fail correctly

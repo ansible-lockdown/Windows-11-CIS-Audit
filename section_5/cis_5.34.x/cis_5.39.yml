@@ -5,7 +5,7 @@
     {{ if not .Vars.win11cis_win_skip_for_test }}
 file:
   win11cis_5_39_winrm:
-    title: "5.39 | Ensure 'Windows Remote Management (WS- Management) (WinRM)' is set to 'Disabled' | WinRM"
+    title: "5.39 | Ensure 'Windows Remote Management (WS-Management) (WinRM)' is set to 'Disabled' | WinRM"
     path: '{{ .Vars.win11cis_snapshot_dir }}\Service.WinRM'
     exists: true
     contents:

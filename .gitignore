@@ -53,3 +53,27 @@ audit_*.txt
 win11cis_policy_snapshot.txt
 # candidate regenerations of hand-edited spec files
 .regen/
+
+# Secrets / keys
+*.vault
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+*.jks
+*.credentials
+*vault_pass*
+.vault_pass
+
+# QA / temp artifacts
+.ansible/
+qa_report.md
+*qa_report*
+prompt.md
+plan.md
+history.md
+*history.md
+*plan.md
+test_inv
+*.pdf

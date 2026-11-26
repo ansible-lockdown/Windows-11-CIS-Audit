@@ -2,6 +2,7 @@
 
 {{ if .Vars.win11cis_level_1 }}
   {{ if .Vars.win11cis_rule_18_4_7 }}
+    {{ if eq .Vars.win11cis_netbt_nodetype 2 }}
 registry:
   HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters\NodeType:
     title: "18.4.7 | Ensure 'NetBT NodeType configuration' is set to 'Enabled: P-node (recommended)' | NodeType"
@@ -23,5 +24,6 @@ registry:
         - SA-10
         - SA-3
         - SA-8
+    {{ end }}
   {{ end }}
 {{ end }}

@@ -1,5 +1,23 @@
 # Changes to Windows11-CIS-Audit
 
+## CIS Benchmark v3.0.0
+## November 2026 - QA fixes
+
+- run_audit.ps1 reads audit policy by subcategory GUID from auditpol /backup, any display language (addresses https://github.com/ansible-lockdown/Windows-11-CIS/issues/45) - Thank you @exu-g
+- collector_targets.json carries the subcategory GUID
+- 17.3.1 title suffix is the benchmark name PNP Activity
+- 18.9.25.2 asserts LAPS PasswordExpirationProtectionEnabled
+- run_audit.ps1 falls back to the registry when CIM lookups fail after an admin rename
+- run_audit.ps1 warns when the firewall profiles cannot be read
+- 5.39 and 18.9.4.2 titles: PDF line-wrap hyphen spacing removed
+- LICENSE company name Quantum Sky
+- 18.4.7 gated on win11cis_netbt_nodetype being P-node, as the role
+- .gitignore secret and QA artifact patterns
+- README resource counts updated
+- goss.yml renamed syver.yml
+- skip reasons in the skip-reason attribute
+- run_audit.ps1 requires syver 0.16.0, validated on 0.21.0
+
 ## September 2026 - BitLocker profile, RDVDenyWriteAccess and NIST meta
 
 - 18.10.92.4.4 asserts SetAllowOptionalContent
