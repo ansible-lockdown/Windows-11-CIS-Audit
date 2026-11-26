@@ -2003,7 +2003,7 @@
   },
   {
     "rule_id": "5.39",
-    "title": "Ensure 'Windows Remote Management (WS- Management) (WinRM)' is set to 'Disabled'",
+    "title": "Ensure 'Windows Remote Management (WS-Management) (WinRM)' is set to 'Disabled'",
     "emitted": true,
     "gate": "win11cis_level_2",
     "file": "section_5/cis_5.34.x/cis_5.39.yml",
@@ -3491,7 +3491,7 @@
   },
   {
     "rule_id": "18.9.4.2",
-    "title": "Ensure 'Remote host allows delegation of non- exportable credentials' is set to 'Enabled'",
+    "title": "Ensure 'Remote host allows delegation of non-exportable credentials' is set to 'Enabled'",
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.9.4.x/cis_18.9.4.2.yml",
@@ -6849,7 +6849,7 @@
     "emitted": true,
     "gate": "win11cis_level_1",
     "file": "section_18/cis_18.10.92.x/cis_18.10.92.4.4.yml",
-    "assertions": 1,
+    "assertions": 2,
     "resources": [
       "registry"
     ],

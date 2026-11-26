@@ -6,7 +6,7 @@
 .DESCRIPTION
     The PowerShell counterpart of run_audit.sh, with one addition.
 
-    Most of what this benchmark checks is not readable by a goss resource:
+    Most of what this benchmark checks is not readable by a syver resource:
     account policy, user rights, audit policy and per-user hives all come from
     secedit / auditpol / the registry under HKEY_USERS. Giving each control its
     own shell-out would mean roughly 130 secedit exports of the same data,
@@ -73,19 +73,13 @@ $BenchmarkOs  = 'Windows-11'
 
 # Overridable from the environment, mirroring run_audit.sh
 $AuditBin = if ($env:AUDIT_BIN) { $env:AUDIT_BIN } else { 'C:\Program Files\syver\syver.exe' }
-# The version this audit was validated against. Everything it uses -- registry:,
-# file: contents:, command:, --vars, --vars-inline, --use-alpha=1 -- works here.
-$AuditBinMinVer = '0.9.4'
-# From 0.11.0 syver reports a check it cannot run as an ERROR instead of letting
-# it pass quietly. Below that, an unsupported assertion can look like a pass, so
-# a green run is worth less. Warned about, not enforced.
-$AuditBinTruthfulVer = '0.11.0'
-# The feature/windows-truthfulness builds carry that behaviour but describe
-# themselves from the branch point, so --version reports 0.9.4-nn-g<commit>
-# while the build is really 0.11.0. Recognise the known-good commits by hash
-# rather than nagging about a version number that understates what is running.
-$AuditBinTruthfulCommits = @('e8ca7df')
-$AuditFile = if ($env:AUDIT_FILE) { $env:AUDIT_FILE } else { 'goss.yml' }
+# Minimum, and enforced rather than warned about. The specs give every
+# deliberate skip a skip-reason: attribute, which syver 0.15.x and older reject
+# as an unknown attribute, aborting the whole run. 0.16.0 also keeps the
+# 0.11.0 behaviour this audit relies on: a check syver cannot run ERRORS rather
+# than passing quietly.
+$AuditBinMinVer = '0.16.0'
+$AuditFile = if ($env:AUDIT_FILE) { $env:AUDIT_FILE } else { 'syver.yml' }
 $AuditContentLocation = if ($env:AUDIT_CONTENT_LOCATION) {
     $env:AUDIT_CONTENT_LOCATION
 } else {
@@ -93,7 +87,7 @@ $AuditContentLocation = if ($env:AUDIT_CONTENT_LOCATION) {
 }
 
 $auditContentDir = Join-Path $AuditContentLocation "$BenchmarkOs-$Benchmark-Audit"
-$gossFile        = Join-Path $auditContentDir $AuditFile
+$auditFilePath   = Join-Path $auditContentDir $AuditFile
 $targetsFile     = Join-Path $auditContentDir 'collector_targets.json'
 $varfilePath     = if ($VarsPath) { $VarsPath } else { Join-Path $auditContentDir "vars\$Benchmark.yml" }
 $snapshotPath    = Join-Path $env:SystemRoot 'Temp\win11cis_policy_snapshot.txt'
@@ -172,7 +166,7 @@ function New-PolicySnapshot {
                 ForEach-Object { Resolve-Principal -Value $_ -MachineSid $machineSid } |
                 Sort-Object -Unique)
         }
-        # An explicit NONE, never an empty value. goss splits a file into lines
+        # An explicit NONE, never an empty value. syver splits a file into lines
         # and an empty file has none, so a /^$/ matcher can never match: every
         # "No One" control would fail while the host was actually compliant.
         if ($members.Count -eq 0) {
@@ -182,41 +176,28 @@ function New-PolicySnapshot {
         }
     }
 
-    # ---- auditpol: one call covering every subcategory ----
-    # /r gives: Machine Name,Policy Target,Subcategory,Subcategory GUID,
-    #           Inclusion Setting,Exclusion Setting
-    # The inclusion setting is text, not a number, and both it and the
-    # subcategory name are localised. The collector turns the text into the
-    # numeric CIS talks in, so the 27 spec files stay locale-independent, and
-    # records the GUID beside it so a localised host can be pinned by GUID later.
-    # An unrecognised setting is recorded verbatim, which fails loudly rather
-    # than passing on an unread value.
-    $inclusionToValue = @{
-        'No Auditing'         = 0
-        'Success'             = 1
-        'Failure'             = 2
-        'Success and Failure' = 3
-    }
-    $auditByName = @{}
-    $guidByName = @{}
-    foreach ($row in @(& auditpol /get /category:* /r 2>$null)) {
-        if ([string]::IsNullOrWhiteSpace($row)) { continue }
-        $fields = $row.Split(',')
-        if ($fields.Count -lt 5) { continue }
-        $name = $fields[2].Trim()
-        if ($name -eq 'Subcategory') { continue }
-        $inclusion = $fields[4].Trim()
-        $guidByName[$name] = $fields[3].Trim()
-        if ($inclusionToValue.ContainsKey($inclusion)) {
-            $auditByName[$name] = $inclusionToValue[$inclusion]
-        } else {
-            $auditByName[$name] = "UNKNOWN=$inclusion"
+    # ---- auditpol: one backup covering every subcategory ----
+    # The backup CSV ends each row with the numeric Setting Value CIS talks in
+    # (0 none, 1 success, 2 failure, 3 both) and carries the subcategory GUID.
+    # Subcategory names, headers and the inclusion text are all localised, so
+    # each row is read by GUID and trailing number, never by name or column
+    # header, and the collector works on any display language (issue 45).
+    $auditByGuid = @{}
+    $backup = Join-Path $env:TEMP 'lockdown_audit_auditpol.csv'
+    & auditpol /backup /file:"$backup" | Out-Null
+    if (Test-Path -LiteralPath $backup) {
+        foreach ($row in Get-Content -LiteralPath $backup) {
+            if ($row -match '(\{[0-9A-Fa-f-]{36}\}).*,(\d+)\s*$') {
+                $auditByGuid[$Matches[1].ToUpper()] = [int]$Matches[2]
+            }
         }
+        Remove-Item -LiteralPath $backup -Force -ErrorAction SilentlyContinue
     }
     foreach ($target in $targets.auditpol) {
-        if ($auditByName.ContainsKey($target.subcategory)) {
-            $lines.Add("AuditPolicy.$($target.rule)=$($auditByName[$target.subcategory])")
-            $lines.Add("AuditPolicyGuid.$($target.rule)=$($guidByName[$target.subcategory])")
+        $guid = "$($target.guid)".ToUpper()
+        if ($guid -and $auditByGuid.ContainsKey($guid)) {
+            $lines.Add("AuditPolicy.$($target.rule)=$($auditByGuid[$guid])")
+            $lines.Add("AuditPolicyGuid.$($target.rule)=$guid")
         } else {
             $lines.Add("AuditPolicy.$($target.rule)=ABSENT")
         }
@@ -245,6 +226,9 @@ function New-PolicySnapshot {
     $profiles = @{}
     foreach ($fw in Get-NetFirewallProfile -PolicyStore ActiveStore -ErrorAction SilentlyContinue) {
         $profiles[$fw.Name] = $fw
+    }
+    if ($profiles.Count -eq 0) {
+        Write-Warning 'Get-NetFirewallProfile returned nothing - section 9 reads ABSENT. This happens in a session whose account was renamed mid-run (2.3.1.4); rerun the audit from a new connection.'
     }
     foreach ($target in $targets.firewall) {
         $value = 'ABSENT'
@@ -290,7 +274,7 @@ function New-PolicySnapshot {
     $utf8 = New-Object System.Text.UTF8Encoding($false)
     [System.IO.File]::WriteAllLines($Path, $lines, $utf8)
 
-    # The same values again, one small file per key. goss prints the WHOLE file
+    # The same values again, one small file per key. syver prints the WHOLE file
     # when a contents: matcher fails, so a single combined snapshot turns one
     # failed control into 170 lines of noise and a 54-failure run into something
     # nobody will read. A file per key means a failure shows just that value.
@@ -334,16 +318,9 @@ if (-not $CollectOnly) {
             $installed = [version]$Matches[1]
             if ($installed -ge [version]$AuditBinMinVer) {
                 Write-Host "OK - syver version is ok ($installed >= $AuditBinMinVer)"
-                $isTruthful = $installed -ge [version]$AuditBinTruthfulVer -or
-                    ($AuditBinTruthfulCommits | Where-Object { $versionRaw -match $_ })
-                if (-not $isTruthful) {
-                    Write-Host ("NOTE - syver $installed is below $AuditBinTruthfulVer and is " +
-                        "not a known feature/windows-truthfulness build. An unsupported " +
-                        "check can pass quietly instead of erroring, so treat a clean run " +
-                        "with that in mind.")
-                }
             } else {
-                Write-Host "WARNING - syver installed = $installed, does not meet minimum of $AuditBinMinVer"
+                Write-Host ("WARNING - syver installed = $installed, does not meet minimum of " +
+                    "$AuditBinMinVer, which the skip-reason: attribute in these specs needs.")
                 $failure = 2
             }
         } else {
@@ -355,10 +332,10 @@ if (-not $CollectOnly) {
         $failure = 1
     }
 
-    if (Test-Path -LiteralPath $gossFile) {
-        Write-Host "OK - $gossFile is available"
+    if (Test-Path -LiteralPath $auditFilePath) {
+        Write-Host "OK - $auditFilePath is available"
     } else {
-        Write-Host "WARNING - the $gossFile is not available"
+        Write-Host "WARNING - the $auditFilePath is not available"
         $failure = 3
     }
 
@@ -404,12 +381,27 @@ if ($CollectOnly) {
 # Audit
 # --------------------------------------------------------------------------
 
-$hostMachineUuid = (Get-CimInstance -ClassName Win32_ComputerSystemProduct).UUID
+# CIM lookups can fail in a session whose account was renamed mid-run (2.3.1.4):
+# "No mapping between account names and security IDs". The UUID and OS fields are
+# report metadata, so fall back to the registry rather than abort the audit.
+$currentVersion  = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion'
+$hostMachineUuid = (Get-CimInstance -ClassName Win32_ComputerSystemProduct -ErrorAction SilentlyContinue).UUID
+if (-not $hostMachineUuid) {
+    $hostMachineUuid = (Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Cryptography' -ErrorAction SilentlyContinue).MachineGuid
+}
 $hostEpoch       = [string][int][double]::Parse((Get-Date -UFormat %s))
 $hostOsLocale    = (Get-TimeZone).Id
-$osInfo          = Get-CimInstance -ClassName Win32_OperatingSystem
-$currentVersion  = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion'
+$osInfo          = Get-CimInstance -ClassName Win32_OperatingSystem -ErrorAction SilentlyContinue
+$osVersion       = if ($osInfo) { $osInfo.Version } else {
+    "$($currentVersion.CurrentMajorVersionNumber).$($currentVersion.CurrentMinorVersionNumber).$($currentVersion.CurrentBuildNumber)"
+}
+$osCaption       = if ($osInfo) { $osInfo.Caption } else { $currentVersion.ProductName }
 $hostOsHostname  = $env:COMPUTERNAME
+$computerSystem  = Get-CimInstance -ClassName Win32_ComputerSystem -ErrorAction SilentlyContinue
+$domainJoined    = if ($computerSystem) { [bool]$computerSystem.PartOfDomain } else {
+    Write-Warning 'Win32_ComputerSystem unavailable - domain membership read from the Tcpip Domain value'
+    [bool](Get-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters' -ErrorAction SilentlyContinue).Domain
+}
 
 if (-not $OutFile) {
     $OutFile = Join-Path $AuditContentLocation "audit_$hostOsHostname-$Benchmark-${BenchmarkOs}_$hostEpoch.$Format"
@@ -423,8 +415,8 @@ $auditJsonVars = @{
     epoch             = $hostEpoch
     os_locale         = $hostOsLocale
     os_release        = $currentVersion.DisplayVersion
-    os_build          = "$($osInfo.Version).$($currentVersion.UBR)"
-    os_distribution   = $osInfo.Caption
+    os_build          = "$osVersion.$($currentVersion.UBR)"
+    os_distribution   = $osCaption
     os_hostname       = $hostOsHostname
     auto_group        = $Group
     system_type       = $SystemType
@@ -435,7 +427,7 @@ $auditJsonVars = @{
     # Detected rather than assumed. Several controls apply only to domain
     # members and four BitLocker ones only to standalone machines; guessing
     # wrong turns skipped controls into failures or vice versa.
-    win11cis_domain_joined   = [bool](Get-CimInstance Win32_ComputerSystem).PartOfDomain
+    win11cis_domain_joined   = $domainJoined
 } | ConvertTo-Json -Compress
 
 $formatArgs = if ($Format -eq 'json') { @('-f', 'json', '-o', 'pretty') } else { @('-f', $Format) }
@@ -463,7 +455,7 @@ $metaVarsFile = Join-Path $env:TEMP 'win11cis_meta_vars.json'
 
 try {
     $output = Invoke-Syver {
-        & $AuditBin --use-alpha=1 -g $gossFile `
+        & $AuditBin --use-alpha=1 -g $auditFilePath `
             --vars $varfilePath --vars $metaVarsFile `
             v --max-concurrent $MaxConcurrent @formatArgs 2>&1
     }

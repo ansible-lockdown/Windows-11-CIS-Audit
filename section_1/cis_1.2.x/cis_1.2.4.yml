@@ -15,8 +15,8 @@ command:
       have-len: 0
     timeout: {{ .Vars.timeout_ms }}
     skip: {{ if not .Vars.win11cis_domain_joined }}false{{ else }}true{{ end }}
+    skip-reason: "domain scoped - on a domain joined host the Default Domain Policy sets this [System Access] value, so the role does not apply it"
     meta:
-      skip_reason: "domain scoped - on a domain joined host the Default Domain Policy sets this [System Access] value, so the role does not apply it"
       workstation: 1
       CIS_ID:
         - 1.2.4
